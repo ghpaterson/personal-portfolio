@@ -10,6 +10,9 @@ module.exports = {
       fontFamily: {
         fungis: ["fungis", "sans-serif"],
       },
+      colors: {
+        blu: "#2180D8",
+      },
     },
   },
   plugins: [],
