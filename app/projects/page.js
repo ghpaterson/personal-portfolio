@@ -1,5 +1,5 @@
 import NavBar from "@/components/navbar";
-import Footer from "@/components/footer";
+import Smiley from "@/components/smiley";
 import Link from "next/link";
 
 export default function Projects() {
@@ -8,11 +8,11 @@ export default function Projects() {
       <NavBar />
       <section>
         <div className="flex justify-center">
-          <ul className="flex flex-col font-fungis text-7xl text-blu pt-16 gap-2">
+          <ul className="flex flex-col font-fungis text-8xl text-blu gap-2">
             <Link className="hover:underline" href="#">
               ECOLIDAY
             </Link>
-            <Link className="pl-8 hover:underline" href="/projects">
+            <Link className="pl-8 hover:underline" href="#">
               MR BLOGGY
             </Link>
             <Link className="pl-16 hover:underline" href="#">
@@ -24,7 +24,7 @@ export default function Projects() {
           </ul>
         </div>
       </section>
-      <Footer />
+      <Smiley />
     </main>
   );
 }

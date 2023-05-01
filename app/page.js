@@ -1,14 +1,32 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
 import arrowwhite from "../public/arrow-white.svg";
+import About from "@/components/about";
+import { useRef } from "react";
 
 export default function Home() {
   const headlessURL = "https://headless-iota-five.vercel.app/";
+
+  const aboutRef = useRef(null);
+
+  const scrollToAbout = (elementRef) => {
+    window.scrollTo({
+      top: elementRef.current.offsetTop,
+      behavior: "smooth",
+    });
+  };
   return (
-    <main className="bg-blu h-screen w-screen">
+    <main className="bg-blu h-full w-screen">
       <section>
         <ul className="flex flex-col font-fungis text-9xl text-white pt-32 ml-20">
-          <Link href="#">ABOUT</Link>
+          <div
+            className="hover:cursor-pointer"
+            onClick={() => scrollToAbout(aboutRef)}
+          >
+            ABOUT
+          </div>
           <Link href="/projects">PROJECTS</Link>
           <div className="flex items-center gap-10">
             <Link href={headlessURL} target="_blank">
@@ -26,6 +44,9 @@ export default function Home() {
           </div>
         </div>
       </section>
+      <div ref={aboutRef}>
+        <About />
+      </div>
     </main>
   );
 }
