@@ -4,11 +4,11 @@ import Link from "next/link";
 
 export default function Projects() {
   return (
-    <main>
+    <main className="h-full bg-blu">
       <NavBar />
-      <section>
+      <section className="h-full bg-blu">
         <div className="flex justify-center">
-          <ul className="flex flex-col font-fungis text-8xl text-blu gap-2">
+          <ul className="flex flex-col font-fungis text-8xl text-white gap-2">
             <Link className="hover:underline" href="#">
               ECOLIDAY
             </Link>

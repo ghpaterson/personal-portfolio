@@ -2,7 +2,7 @@ import { BsEmojiSmileFill } from "react-icons/bs";
 
 export default function Smiley() {
   return (
-    <div className=" flex justify-end text-blu text-9xl px-44 -mt-10">
+    <div className="bg-blu flex justify-end text-white text-9xl px-44 -mt-20 pb-16">
       <BsEmojiSmileFill />
     </div>
   );

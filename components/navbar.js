@@ -5,7 +5,7 @@ export default function NavBar() {
     <nav>
       <Link
         href="/"
-        className="font-fungis text-7xl text-blu flex justify-end px-20 py-10"
+        className="font-fungis text-7xl text-white flex justify-end px-20 py-10"
       >
         HOME
       </Link>

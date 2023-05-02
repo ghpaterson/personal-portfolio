@@ -4,14 +4,16 @@ import Image from "next/image";
 import Link from "next/link";
 import arrowwhite from "../public/arrow-white.svg";
 import About from "@/components/about";
+import Projects from "@/components/projects";
 import { useRef } from "react";
 
 export default function Home() {
   const headlessURL = "https://headless-iota-five.vercel.app/";
 
   const aboutRef = useRef(null);
+  const projectsRef = useRef(null);
 
-  const scrollToAbout = (elementRef) => {
+  const scrollToElement = (elementRef) => {
     window.scrollTo({
       top: elementRef.current.offsetTop,
       behavior: "smooth",
@@ -23,11 +25,16 @@ export default function Home() {
         <ul className="flex flex-col font-fungis text-9xl text-white pt-32 ml-20">
           <div
             className="hover:cursor-pointer"
-            onClick={() => scrollToAbout(aboutRef)}
+            onClick={() => scrollToElement(aboutRef)}
           >
             ABOUT
           </div>
-          <Link href="/projects">PROJECTS</Link>
+          <div
+            className="hover:cursor-pointer"
+            onClick={() => scrollToElement(projectsRef)}
+          >
+            PROJECTS
+          </div>
           <div className="flex items-center gap-10">
             <Link href={headlessURL} target="_blank">
               BLOG
@@ -46,6 +53,9 @@ export default function Home() {
       </section>
       <div ref={aboutRef}>
         <About />
+      </div>
+      <div ref={projectsRef}>
+        <Projects />
       </div>
     </main>
   );
