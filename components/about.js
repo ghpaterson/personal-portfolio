@@ -1,4 +1,4 @@
-import NavBar from "@/components/navbar";
+import ToTop from "./totop";
 
 export default function About() {
   return (
