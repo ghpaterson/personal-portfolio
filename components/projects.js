@@ -2,10 +2,10 @@ import NavBar from "@/components/navbar";
 import Smiley from "@/components/smiley";
 import Link from "next/link";
 
-export default function Projects() {
+export default function Projects({ homeRef }) {
   return (
     <main className="h-full bg-blu">
-      <NavBar />
+      <NavBar homeRef={homeRef} />
       <section className="h-full bg-blu">
         <div className="flex justify-center">
           <ul className="flex flex-col font-fungis text-8xl text-white gap-2">

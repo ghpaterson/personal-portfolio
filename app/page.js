@@ -12,6 +12,7 @@ export default function Home() {
 
   const aboutRef = useRef(null);
   const projectsRef = useRef(null);
+  const homeRef = useRef(null);
 
   const scrollToElement = (elementRef) => {
     window.scrollTo({
@@ -20,7 +21,7 @@ export default function Home() {
     });
   };
   return (
-    <main className="bg-blu h-full w-screen">
+    <main className="bg-blu h-full w-screen" ref={homeRef}>
       <section>
         <ul className="flex flex-col font-fungis text-9xl text-white pt-32 ml-20">
           <div
@@ -55,7 +56,7 @@ export default function Home() {
         <About />
       </div>
       <div ref={projectsRef}>
-        <Projects />
+        <Projects homeRef={homeRef} />
       </div>
     </main>
   );

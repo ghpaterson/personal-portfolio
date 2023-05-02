@@ -1,14 +1,21 @@
-import Link from "next/link";
+export default function NavBar({ homeRef, aboutRef }) {
+  const scrollToElement = (elementRef) => {
+    window.scrollTo({
+      top: elementRef.current.offsetTop,
+      behavior: "smooth",
+    });
+  };
 
-export default function NavBar() {
   return (
     <nav>
-      <Link
-        href="/"
-        className="font-fungis text-7xl text-white flex justify-end px-20 py-10"
+      <div
+        className={`font-fungis text-7xl ${
+          aboutRef ? "text-blue" : "text-white"
+        } flex justify-end px-20 py-10 hover:cursor-pointer`}
+        onClick={() => scrollToElement(homeRef)}
       >
         HOME
-      </Link>
+      </div>
     </nav>
   );
 }
