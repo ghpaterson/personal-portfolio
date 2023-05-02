@@ -2,63 +2,64 @@ import ToTop from "@/components/totop";
 import Smiley from "@/components/smiley";
 import Link from "next/link";
 import Image from "next/image";
-import { useState, useEffect } from "react";
-import { GraphQLClient, gql } from "graphql-request";
-import projects from "../public/projects.svg";
 
-const graphcms = new GraphQLClient(
-  "https://api-eu-west-2.hygraph.com/v2/clh3jd99j56t501t8644q7je9/master"
-);
-
-const QUERY = gql`
+const posts = [
   {
-    posts {
-      id
-      title
-      slug
-      content {
-        html
-      }
-      photo {
-        url
-      }
-    }
-  }
-`;
+    id: 1,
+    title: "ECOLIDAY",
+    slug: "ecoliday",
+    ml: "8",
+    photo: {
+      url: "https://example.com/ecoliday.png",
+    },
+  },
+  {
+    id: 2,
+    title: "MR BLOGGY",
+    slug: "mrbloggy",
+    ml: "4",
+    photo: {
+      url: "https://example.com/mrbloggy.png",
+    },
+  },
+  {
+    id: 3,
+    title: "DECODE CARE",
+    slug: "decodecare",
+    ml: "8",
+    photo: {
+      url: "https://example.com/decodecare.png",
+    },
+  },
+  {
+    id: 4,
+    title: "   HEADLESS",
+    slug: "headless",
+    ml: "20",
+    photo: {
+      url: "https://example.com/headless.png",
+    },
+  },
+];
 
 export default function Projects({ homeRef, slug }) {
-  const [posts, setPosts] = useState([]);
-
-  useEffect(() => {
-    async function fetchPosts() {
-      const { posts } = await graphcms.request(QUERY);
-      setPosts(posts);
-    }
-    fetchPosts();
-  }, []);
-
   return (
     <main className="h-full bg-blu">
       <ToTop homeRef={homeRef} />
       <section className="h-full bg-blu">
         <div className="flex gap-60">
           <div className="px-8 -mt-6">
-            <Image src={projects} width={70} />
+            <Image src="/projects.svg" width={70} height={20} />
           </div>
           <div className="flex justify-center mt-6">
             <ul className="flex flex-col font-fungis text-8xl text-white gap-2">
-              <Link className="hover:underline" href="/ecoliday">
-                ECOLIDAY
-              </Link>
-              <Link className="pl-8 hover:underline" href="/mrbloggy">
-                MR BLOGGY
-              </Link>
-              <Link className="pl-16 hover:underline" href="/decodecare">
-                DECODE CARE
-              </Link>
-              <Link className="pl-24 hover:underline" href="/headless">
-                HEADLESS
-              </Link>
+              {posts.map((post) => (
+                <Link key={post.id} href={`/${post.slug}`}>
+                  <div className={`hover:underline ml-${post.ml}`}>
+                    {post.title}
+                  </div>
+                </Link>
+              ))}
             </ul>
           </div>
         </div>
