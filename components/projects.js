@@ -4,6 +4,9 @@ import Smiley from "@/components/smiley";
 import Image from "next/image";
 import { useRef } from "react";
 import Ecoliday from "@/projects/ecoliday";
+import Bloggy from "@/projects/bloggy";
+import Decode from "@/projects/decode";
+import Headless from "@/projects/headless";
 
 const posts = [
   {
@@ -89,21 +92,27 @@ export default function Projects({ homeRef }) {
         ref={bloggyRef}
       >
         <ToLeft scrollToRef={projectsRef} />
-        <h2 className="text-6xl text-blu font-fungis">MISTER BLOGGY</h2>
+        <div className="">
+          <Bloggy />
+        </div>
       </section>
       <section
         className="snap-start bg-white flex-shrink-0 h-screen w-screen"
         ref={decodeRef}
       >
         <ToLeft scrollToRef={projectsRef} />
-        <h2 className="text-6xl text-blu font-fungis">DECODE CARE</h2>
+        <div className="py-20">
+          <Decode />
+        </div>
       </section>
       <section
         className="snap-start bg-white flex-shrink-0 h-screen w-screen"
         ref={headlessRef}
       >
         <ToLeft scrollToRef={projectsRef} />
-        <h2 className="text-6xl text-blu font-fungis">HEADLESS</h2>
+        <div className="">
+          <Headless />
+        </div>
       </section>
     </main>
   );
