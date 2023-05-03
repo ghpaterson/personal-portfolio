@@ -106,7 +106,7 @@ export default function Home() {
         <About />
       </div>
       <div ref={projectsRef}>
-        <Projects homeRef={homeRef} />
+        <Projects homeRef={homeRef} projectsRef={projectsRef} />
       </div>
     </main>
   );
