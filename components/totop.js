@@ -11,9 +11,7 @@ export default function ToTop({ homeRef, aboutRef }) {
   return (
     <nav>
       <div
-        className={`font-fungis text-7xl ${
-          aboutRef ? "text-blue" : "text-white"
-        } flex justify-end px-20 py-10 hover:cursor-pointer`}
+        className="font-fungis text-7xl text-white flex justify-end px-20 py-10 hover:cursor-pointer"
         onClick={() => scrollToElement(homeRef)}
       >
         <BsArrowUp />

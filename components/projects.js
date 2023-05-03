@@ -3,6 +3,7 @@ import ToLeft from "@/components/toleft";
 import Smiley from "@/components/smiley";
 import Image from "next/image";
 import { useRef } from "react";
+import Ecoliday from "@/projects/ecoliday";
 
 const posts = [
   {
@@ -31,12 +32,12 @@ const posts = [
   },
 ];
 
-export default function Projects({ projectsRef, homeRef }) {
+export default function Projects({ homeRef }) {
   const ecolidayRef = useRef(null);
   const bloggyRef = useRef(null);
   const decodeRef = useRef(null);
   const headlessRef = useRef(null);
-  // const projectsRef = useRef(null);
+  const projectsRef = useRef(null);
 
   const handleProjectScroll = (ref) => {
     ref.current.scrollIntoView({ behavior: "smooth" });
@@ -73,34 +74,32 @@ export default function Projects({ projectsRef, homeRef }) {
         </div>
       </section>
       <section
-        className="snap-start bg-white flex-shrink-0 h-screen w-screen flex"
+        className="snap-start bg-white flex-shrink-0 h-screen w-screen"
         ref={ecolidayRef}
       >
-        <div className="flex flex-col">
-          <div>
-            <ToLeft scrollToRef={projectsRef} />
-          </div>
-          <div className="">
-            <h2 className="text-6xl text-blu font-fungis">ECOLIDAY</h2>
-          </div>
+        <div className="p-4">
+          <ToLeft scrollToRef={projectsRef} />
+        </div>
+        <div className="-mt-8">
+          <Ecoliday />
         </div>
       </section>
       <section
-        className="snap-start bg-white flex-shrink-0 h-screen w-screen flex justify-center"
+        className="snap-start bg-white flex-shrink-0 h-screen w-screen"
         ref={bloggyRef}
       >
         <ToLeft scrollToRef={projectsRef} />
         <h2 className="text-6xl text-blu font-fungis">MISTER BLOGGY</h2>
       </section>
       <section
-        className="snap-start bg-white flex-shrink-0 h-screen w-screen flex justify-center"
+        className="snap-start bg-white flex-shrink-0 h-screen w-screen"
         ref={decodeRef}
       >
         <ToLeft scrollToRef={projectsRef} />
         <h2 className="text-6xl text-blu font-fungis">DECODE CARE</h2>
       </section>
       <section
-        className="snap-start bg-white flex-shrink-0 h-screen w-screen flex justify-center"
+        className="snap-start bg-white flex-shrink-0 h-screen w-screen"
         ref={headlessRef}
       >
         <ToLeft scrollToRef={projectsRef} />
