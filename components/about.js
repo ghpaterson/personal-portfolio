@@ -1,46 +1,47 @@
 import Image from "next/image";
 import about from "../public/about.svg";
 import aboutarrow1 from "../public/aboutarrow1.svg";
-import { useEffect, useState } from "react";
-import { GraphQLClient, gql } from "graphql-request";
 
-const graphcms = new GraphQLClient(
-  "https://api-eu-west-2.hygraph.com/v2/clh3jd99j56t501t8644q7je9/master"
-);
+const API_KEY = process.env.API_KEY;
 
-const QUERY = gql`
-  {
-    posts {
-      id
-      title
-      slug
-      content {
-        html
-      }
-      photo {
-        url
-      }
+const getPosts = async () => {
+  const response = await fetch(
+    `https://api-eu-west-2.hygraph.com/v2/${API_KEY}/master`,
+    {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+      body: JSON.stringify({
+        query: `{
+            posts {
+                id
+                title
+                slug
+                content {
+                  html
+                }
+                photo {
+                  url
+                }
+              }
+            }`,
+      }),
     }
-  }
-`;
-
-export default function About() {
-  const [posts, setPosts] = useState([]);
-
-  useEffect(() => {
-    async function fetchPosts() {
-      const { posts } = await graphcms.request(QUERY);
-      setPosts(posts);
-    }
-    fetchPosts();
-  }, []);
-
-  const ambulancePost = posts.find(
-    (post) =>
-      post.photo.url === "https://media.graphassets.com/B2t04OuPQ4azgZWXzKzA"
   );
 
-  console.log(posts);
+  const { data } = await response.json();
+
+  return data.posts;
+};
+
+export default async function About() {
+  const posts = await getPosts();
+
+  const postId = "clh6hg35qclr10bmkq00c07pb";
+  const post = posts.find((post) => post.id === postId);
+
   return (
     <main className="bg-white h-full w-screen">
       <section>
@@ -59,10 +60,10 @@ export default function About() {
             </div>
           </div>
           <div>
-            {ambulancePost && (
+            {post && (
               <div className="z-0 py-10 -ml-28">
                 <img
-                  src={ambulancePost.photo.url}
+                  src={post.photo.url}
                   width={550}
                   height={500}
                   alt="photo"
