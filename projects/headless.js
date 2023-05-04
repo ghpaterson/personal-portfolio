@@ -28,6 +28,7 @@ const getPosts = async () => {
   );
 
   const { data } = await response.json();
+  console.log("data:", data);
 
   return data.posts;
 };
@@ -41,14 +42,11 @@ export default async function Headless() {
   return (
     <main>
       <section>
-        <div
-          className="flex flex-col justify-center items-center gap-2"
-          key={post.id}
-        >
-          <h2 className="font-fungis text-5xl text-blu -mt-10">{post.title}</h2>
-          <img src={post.photo.url} alt={post.title} width={680} />
+        <div className="flex flex-col justify-center gap-2 ml-10" key={post.id}>
+          <h2 className="font-fungis text-8xl text-blu -mt-10">{post.title}</h2>
+          <img src={post.photo.url} alt={post.title} width={720} />
           <div
-            className="text-blu"
+            className="text-blu prose"
             dangerouslySetInnerHTML={{ __html: post.content.html }}
           />
         </div>

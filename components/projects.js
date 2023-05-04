@@ -83,7 +83,7 @@ export default function Projects({ homeRef }) {
         <div className="p-4">
           <ToLeft scrollToRef={projectsRef} />
         </div>
-        <div className="-mt-8">
+        <div className="-mt-2 px-10">
           <Ecoliday />
         </div>
       </section>
@@ -91,8 +91,10 @@ export default function Projects({ homeRef }) {
         className="snap-start bg-white flex-shrink-0 h-screen w-screen"
         ref={bloggyRef}
       >
-        <ToLeft scrollToRef={projectsRef} />
-        <div className="">
+        <div className="p-4">
+          <ToLeft scrollToRef={projectsRef} />
+        </div>
+        <div className="-mt-2 px-10">
           <Bloggy />
         </div>
       </section>
@@ -100,8 +102,10 @@ export default function Projects({ homeRef }) {
         className="snap-start bg-white flex-shrink-0 h-screen w-screen"
         ref={decodeRef}
       >
-        <ToLeft scrollToRef={projectsRef} />
-        <div className="py-20">
+        <div className="p-4">
+          <ToLeft scrollToRef={projectsRef} />
+        </div>
+        <div className="-mt-2 px-10">
           <Decode />
         </div>
       </section>
@@ -109,8 +113,10 @@ export default function Projects({ homeRef }) {
         className="snap-start bg-white flex-shrink-0 h-screen w-screen"
         ref={headlessRef}
       >
-        <ToLeft scrollToRef={projectsRef} />
-        <div className="">
+        <div className="p-4">
+          <ToLeft scrollToRef={projectsRef} />
+        </div>
+        <div className="-mt-2 px-10">
           <Headless />
         </div>
       </section>
