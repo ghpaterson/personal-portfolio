@@ -1,40 +1,42 @@
-import { useEffect, useState } from "react";
-import { GraphQLClient, gql } from "graphql-request";
+const API_KEY = process.env.API_KEY;
 
-const graphcms = new GraphQLClient(
-  "https://api-eu-west-2.hygraph.com/v2/clh3jd99j56t501t8644q7je9/master"
-);
-
-const QUERY = gql`
-  {
-    posts {
-      id
-      title
-      slug
-      content {
-        html
-      }
-      photo {
-        url
-      }
+const getPosts = async () => {
+  const response = await fetch(
+    `https://api-eu-west-2.hygraph.com/v2/${API_KEY}/master`,
+    {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+      body: JSON.stringify({
+        query: `{
+            posts {
+                id
+                title
+                slug
+                content {
+                  html
+                }
+                photo {
+                  url
+                }
+              }
+            }`,
+      }),
     }
-  }
-`;
+  );
 
-export default function Ecoliday() {
-  const [post, setPost] = useState(null);
+  const { data } = await response.json();
 
-  useEffect(() => {
-    async function fetchPost() {
-      const { posts } = await graphcms.request(QUERY);
-      const postId = "clh4txg018c4t0amn7alljyfu";
-      const post = posts.find((p) => p.id === postId);
-      setPost(post);
-    }
-    fetchPost();
-  }, []);
+  return data.posts;
+};
 
-  if (!post) return null;
+export default async function Ecoliday() {
+  const posts = await getPosts();
+
+  const postId = "clh4txg018c4t0amn7alljyfu";
+  const post = posts.find((post) => post.id === postId);
 
   return (
     <main>

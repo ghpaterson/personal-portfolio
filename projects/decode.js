@@ -1,57 +1,56 @@
-import { useEffect, useState } from "react";
-import { GraphQLClient, gql } from "graphql-request";
+const API_KEY = process.env.API_KEY;
 
-const graphcms = new GraphQLClient(
-  "https://api-eu-west-2.hygraph.com/v2/clh3jd99j56t501t8644q7je9/master"
-);
-
-const QUERY = gql`
-  {
-    posts {
-      id
-      title
-      slug
-      content {
-        html
-      }
-      photo {
-        url
-      }
+const getPosts = async () => {
+  const response = await fetch(
+    `https://api-eu-west-2.hygraph.com/v2/${API_KEY}/master`,
+    {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+      body: JSON.stringify({
+        query: `{
+            posts {
+                id
+                title
+                slug
+                content {
+                  html
+                }
+                photo {
+                  url
+                }
+              }
+            }`,
+      }),
     }
-  }
-`;
+  );
 
-export default function Decode() {
-  const [post, setPost] = useState(null);
+  const { data } = await response.json();
 
-  useEffect(() => {
-    async function fetchPost() {
-      const { posts } = await graphcms.request(QUERY);
-      const postId = "clh61sajlay180bmmuh4bk6yy";
-      const post = posts.find((p) => p.id === postId);
-      setPost(post);
-    }
-    fetchPost();
-  }, []);
+  return data.posts;
+};
 
-  if (!post) return null;
+export default async function Decode() {
+  const posts = await getPosts();
+
+  const postId = "clh61sajlay180bmmuh4bk6yy";
+  const post = posts.find((post) => post.id === postId);
 
   return (
     <main>
       <section>
-        <div className="gap-2 flex" key={post.id}>
-          <div>
-            <h2 className="font-fungis text-7xl px-20 text-blu -mt-10">
-              {post.title}
-            </h2>
-            <img src={post.photo.url} alt={post.title} width={680} />
-          </div>
-          <div className="">
-            <div
-              className=" text-blu pr-20"
-              dangerouslySetInnerHTML={{ __html: post.content.html }}
-            />
-          </div>
+        <div
+          className="flex flex-col justify-center items-center gap-2"
+          key={post.id}
+        >
+          <h2 className="font-fungis text-5xl text-blu -mt-10">{post.title}</h2>
+          <img src={post.photo.url} alt={post.title} width={680} />
+          <div
+            className="text-blu"
+            dangerouslySetInnerHTML={{ __html: post.content.html }}
+          />
         </div>
       </section>
     </main>
