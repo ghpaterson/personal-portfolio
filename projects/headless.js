@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const API_KEY = process.env.API_KEY;
 
 const getPosts = async () => {
@@ -34,6 +36,7 @@ const getPosts = async () => {
 };
 
 export default async function Headless() {
+  const headlessURL = "https://headless-iota-five.vercel.app/";
   const posts = await getPosts();
 
   const postId = "clh61ux41ax550amn9x7p8rl4";
@@ -43,7 +46,11 @@ export default async function Headless() {
     <main>
       <section>
         <div className="flex flex-col justify-center gap-2 ml-10" key={post.id}>
-          <h2 className="font-fungis text-8xl text-blu -mt-10">{post.title}</h2>
+          <Link href={headlessURL} target="_blank">
+            <h2 className="font-fungis text-8xl text-blu -mt-10">
+              {post.title}
+            </h2>
+          </Link>
           <img src={post.photo.url} alt={post.title} width={720} />
           <div
             className="text-blu prose"

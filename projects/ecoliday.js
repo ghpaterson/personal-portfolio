@@ -1,3 +1,4 @@
+import Link from "next/link";
 const API_KEY = process.env.API_KEY;
 
 const getPosts = async () => {
@@ -33,6 +34,7 @@ const getPosts = async () => {
 };
 
 export default async function Ecoliday() {
+  const ecolidayURL = "https://ecoliday-cxyz.onrender.com/";
   const posts = await getPosts();
 
   const postId = "clh4txg018c4t0amn7alljyfu";
@@ -42,7 +44,11 @@ export default async function Ecoliday() {
     <main>
       <section>
         <div className="flex flex-col justify-center gap-2 ml-10" key={post.id}>
-          <h2 className="font-fungis text-8xl text-blu -mt-10">{post.title}</h2>
+          <Link href={ecolidayURL} target="_blank">
+            <h2 className="font-fungis text-8xl text-blu -mt-10">
+              {post.title}
+            </h2>
+          </Link>
           <img src={post.photo.url} alt={post.title} width={720} />
           <div
             className="text-blu prose"
