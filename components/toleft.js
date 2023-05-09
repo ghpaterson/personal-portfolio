@@ -2,7 +2,7 @@ import { BsArrowLeft } from "react-icons/bs";
 
 export default function ToLeft({ scrollToElement }) {
   const scrollToProjectHome = () => {
-    scrollToElement("projects");
+    scrollToElement("project-home");
   };
   return (
     <main>

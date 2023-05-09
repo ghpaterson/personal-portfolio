@@ -43,7 +43,10 @@ export default function Projects({ scrollToElement }) {
   };
   return (
     <main className="snap-x snap-mandatory h-screen w-screen flex overflow-y-hidden">
-      <section className="snap-start bg-blu flex-shrink-0 h-screen w-screen">
+      <section
+        id="project-home"
+        className="snap-start bg-blu flex-shrink-0 h-screen w-screen"
+      >
         <ToTop scrollToElement={scrollToElement} />
         <div className="flex gap-60">
           <div className="px-8 -mt-6">
@@ -78,7 +81,7 @@ export default function Projects({ scrollToElement }) {
       </section>
       <section className="snap-start bg-bone flex-shrink-0 h-screen w-screen">
         <div className="p-4">
-          <ToLeft />
+          <ToLeft scrollToElement={scrollToElement} />
         </div>
         <div id="bloggy" className="-mt-2 px-10">
           <Bloggy />
@@ -86,7 +89,7 @@ export default function Projects({ scrollToElement }) {
       </section>
       <section className="snap-start bg-bone flex-shrink-0 h-screen w-screen">
         <div className="p-4">
-          <ToLeft />
+          <ToLeft scrollToElement={scrollToElement} />
         </div>
         <div id="decode" className="-mt-2 px-10">
           <Decode />
@@ -94,7 +97,7 @@ export default function Projects({ scrollToElement }) {
       </section>
       <section className="snap-start bg-bone flex-shrink-0 h-screen w-screen">
         <div className="p-4">
-          <ToLeft />
+          <ToLeft scrollToElement={scrollToElement} />
         </div>
         <div id="headless" className="-mt-2 px-10">
           <Headless />
