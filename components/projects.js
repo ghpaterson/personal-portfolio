@@ -1,5 +1,3 @@
-"use client";
-
 import ToTop from "@/components/totop";
 import ToLeft from "@/components/toleft";
 import Smiley from "@/components/smiley";
@@ -72,7 +70,7 @@ export default function Projects({ scrollToElement }) {
       </section>
       <section className="snap-start bg-bone flex-shrink-0 h-screen w-screen">
         <div className="p-4">
-          <ToLeft />
+          <ToLeft scrollToElement={scrollToElement} />
         </div>
         <div id="ecoliday" className="-mt-2 px-10">
           <Ecoliday />
