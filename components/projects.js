@@ -37,6 +37,12 @@ const posts = [
 ];
 
 export default function Projects({ scrollToElement }) {
+  const scrollToProject = (id) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
   return (
     <main className="snap-x snap-mandatory h-screen w-screen flex overflow-y-hidden">
       <section className="snap-start bg-blu flex-shrink-0 h-screen w-screen">
@@ -51,6 +57,7 @@ export default function Projects({ scrollToElement }) {
                 <div key={post.id}>
                   <div
                     className={`hover:underline hover:cursor-pointer ml-${post.ml}`}
+                    onClick={() => scrollToProject(post.slug)}
                   >
                     {post.title}
                   </div>
@@ -67,7 +74,7 @@ export default function Projects({ scrollToElement }) {
         <div className="p-4">
           <ToLeft />
         </div>
-        <div className="-mt-2 px-10">
+        <div id="ecoliday" className="-mt-2 px-10">
           <Ecoliday />
         </div>
       </section>
@@ -75,7 +82,7 @@ export default function Projects({ scrollToElement }) {
         <div className="p-4">
           <ToLeft />
         </div>
-        <div className="-mt-2 px-10">
+        <div id="bloggy" className="-mt-2 px-10">
           <Bloggy />
         </div>
       </section>
@@ -83,7 +90,7 @@ export default function Projects({ scrollToElement }) {
         <div className="p-4">
           <ToLeft />
         </div>
-        <div className="-mt-2 px-10">
+        <div id="decode" className="-mt-2 px-10">
           <Decode />
         </div>
       </section>
@@ -91,7 +98,7 @@ export default function Projects({ scrollToElement }) {
         <div className="p-4">
           <ToLeft />
         </div>
-        <div className="-mt-2 px-10">
+        <div id="headless" className="-mt-2 px-10">
           <Headless />
         </div>
       </section>
