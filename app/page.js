@@ -4,7 +4,7 @@ import About from "@/components/about";
 import Projects from "@/components/projects";
 import Hero from "@/components/hero";
 
-export default function Home({ posts }) {
+export default function Home() {
   const scrollToElement = (id) => {
     const element = document.getElementById(id);
     if (element) {
@@ -21,7 +21,7 @@ export default function Home({ posts }) {
         <About />
       </div>
       <div id="projects">
-        <Projects />
+        <Projects scrollToElement={scrollToElement} />
       </div>
     </main>
   );
