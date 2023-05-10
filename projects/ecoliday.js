@@ -15,7 +15,8 @@ export default async function Ecoliday() {
         </div>
         <div className="flex gap-10">
           <Image src={ecoliday} width={900} />
-          <p className="text-blu text-2xl">
+          <h2 className="text-blu text-6xl font-fungis">"click"</h2>
+          <p className="text-blu text-2xl py-4">
             Ecoliday was designed to let users make informed decisions about
             their personal travel by comparing the Carbon Emission of various
             methods of transport
