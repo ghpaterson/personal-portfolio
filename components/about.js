@@ -1,87 +1,45 @@
 import Image from "next/image";
 import about from "../public/about.svg";
-import aboutarrow1 from "../public/aboutarrow1.svg";
-
-const API_KEY = process.env.API_KEY;
-
-const getPosts = async () => {
-  const response = await fetch(
-    `https://api-eu-west-2.hygraph.com/v2/${API_KEY}/master`,
-    {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Accept: "application/json",
-      },
-      body: JSON.stringify({
-        query: `{
-            posts {
-                id
-                title
-                slug
-                content {
-                  html
-                }
-                photo {
-                  url
-                }
-              }
-            }`,
-      }),
-    }
-  );
-
-  const { data } = await response.json();
-
-  return data.posts;
-};
+import aboutImages from "../public/aboutImages.png";
+import Link from "next/link";
 
 export default async function About() {
-  const posts = await getPosts();
-
-  const postId = "clh6hg35qclr10bmkq00c07pb";
-  const post = posts.find((post) => post.id === postId);
-
+  const githubURL = "https://github.com/ghpaterson";
+  const linkedinURL = "https://www.linkedin.com/in/graeme-paterson-25b096268/";
   return (
-    <main className="bg-white h-full w-screen">
-      <section>
-        <div className="flex relative py-10">
-          <div className="px-8 py-16 flex gap-40 z-10">
-            <Image src={about} width={70} />
-            <div className="flex flex-col gap-12 text-4xl">
-              <h2 className="font-fungis text-blu text-5xl ml-40 ">
-                Paramedic
-              </h2>
-              <Image src={aboutarrow1} width={80} className="ml-24" />
-              <h2 className="font-fungis text-blu ">
-                Software
-                <br /> Developer
-              </h2>
+    <main className="bg-bone h-full w-screen">
+      <section className="flex justify-between">
+        <div className="mt-10">
+          <div className="flex items-start gap-44 px-8 py-4">
+            <Image src={about} width={70} height={20} />
+            <div className="flex flex-col justify-center gap-10 text-6xl text-blu font-fungis py-4">
+              <Link href={githubURL} target="_blank">
+                GITHUB
+              </Link>
+              <Link href={linkedinURL} target="_blank">
+                LINKEDIN
+              </Link>
             </div>
           </div>
-          <div>
-            {post && (
-              <div className="z-0 py-10 -ml-28">
-                <img
-                  src={post.photo.url}
-                  width={550}
-                  height={500}
-                  alt="photo"
-                  className="filter grayscale opacity-30"
-                />
-              </div>
-            )}
+          <div className="flex justify-center ml-64 -mt-20">
+            <div className="text-blu w-96 flex flex-col text-xl justify-center gap-4">
+              <h1>From Brisbane, Australia</h1>
+              <p>
+                After 10 years as a paramedic, I aim to utilise my passion for
+                technology to serve the community and enhance people's lives in
+                a new way.
+              </p>
+              <p>
+                When I'm not engrossed in keeping up with the latest
+                developments in technology, I take pleasure in indulging in my
+                hobbies, such as attending live music gigs and experimenting in
+                the kitchen.
+              </p>
+            </div>
           </div>
         </div>
-      </section>
-      <section className="flex justify-center py-6 ">
-        <div className="flex flex-col font-fungis text-2xl text-blu gap-4">
-          <h3 className="text-3xl -ml-4">from Brisbane, Australia</h3>
-          <h3>
-            having spent over 10 years working in public healthcare
-            <br /> services I was keen to find better ways to service the
-            <br /> community through the tech industry
-          </h3>
+        <div className="flex justify-end py-6">
+          <Image src={aboutImages} width={700} />
         </div>
       </section>
     </main>

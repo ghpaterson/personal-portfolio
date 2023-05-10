@@ -1,15 +1,14 @@
 import { BsArrowLeft } from "react-icons/bs";
 
-export default function ToLeft({ scrollToRef }) {
-  const handleProjectsClick = () => {
-    scrollToRef.current.scrollIntoView({ behavior: "smooth" });
+export default function ToLeft({ scrollToElement }) {
+  const scrollToProjectHome = () => {
+    scrollToElement("project-home");
   };
-
   return (
     <main>
       <div
         className="hover:cursor-pointer text-blu text-7xl"
-        onClick={() => handleProjectsClick()}
+        onClick={scrollToProjectHome}
       >
         <BsArrowLeft />
       </div>

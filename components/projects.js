@@ -2,7 +2,6 @@ import ToTop from "@/components/totop";
 import ToLeft from "@/components/toleft";
 import Smiley from "@/components/smiley";
 import Image from "next/image";
-import { useRef } from "react";
 import Ecoliday from "@/projects/ecoliday";
 import Bloggy from "@/projects/bloggy";
 import Decode from "@/projects/decode";
@@ -35,35 +34,31 @@ const posts = [
   },
 ];
 
-export default function Projects({ homeRef }) {
-  const ecolidayRef = useRef(null);
-  const bloggyRef = useRef(null);
-  const decodeRef = useRef(null);
-  const headlessRef = useRef(null);
-  const projectsRef = useRef(null);
-
-  const handleProjectScroll = (ref) => {
-    ref.current.scrollIntoView({ behavior: "smooth" });
+export default function Projects({ scrollToElement }) {
+  const scrollToProject = (id) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
   };
-
   return (
     <main className="snap-x snap-mandatory h-screen w-screen flex overflow-y-hidden">
       <section
+        id="project-home"
         className="snap-start bg-blu flex-shrink-0 h-screen w-screen"
-        ref={projectsRef}
       >
-        <ToTop homeRef={homeRef} />
+        <ToTop scrollToElement={scrollToElement} />
         <div className="flex gap-60">
           <div className="px-8 -mt-6">
-            <Image src="/projects.svg" width={70} height={20} />
+            <Image src="/projectsTitle.svg" width={70} height={20} />
           </div>
           <div className="flex justify-center">
-            <ul className="flex flex-col font-fungis text-8xl text-white gap-2">
+            <ul className="flex flex-col font-fungis text-8xl text-bone gap-2">
               {posts.map((post) => (
                 <div key={post.id}>
                   <div
                     className={`hover:underline hover:cursor-pointer ml-${post.ml}`}
-                    onClick={() => handleProjectScroll(eval(`${post.slug}Ref`))}
+                    onClick={() => scrollToProject(post.slug)}
                   >
                     {post.title}
                   </div>
@@ -76,41 +71,35 @@ export default function Projects({ homeRef }) {
           <Smiley />
         </div>
       </section>
-      <section
-        className="snap-start bg-white flex-shrink-0 h-screen w-screen"
-        ref={ecolidayRef}
-      >
+      <section className="snap-start bg-bone flex-shrink-0 h-screen w-screen">
         <div className="p-4">
-          <ToLeft scrollToRef={projectsRef} />
+          <ToLeft scrollToElement={scrollToElement} />
         </div>
-        <div className="-mt-8">
+        <div id="ecoliday" className="-mt-2 px-10">
           <Ecoliday />
         </div>
       </section>
-      <section
-        className="snap-start bg-white flex-shrink-0 h-screen w-screen"
-        ref={bloggyRef}
-      >
-        <ToLeft scrollToRef={projectsRef} />
-        <div className="">
+      <section className="snap-start bg-bone flex-shrink-0 h-screen w-screen">
+        <div className="p-4">
+          <ToLeft scrollToElement={scrollToElement} />
+        </div>
+        <div id="bloggy" className="-mt-2 px-10">
           <Bloggy />
         </div>
       </section>
-      <section
-        className="snap-start bg-white flex-shrink-0 h-screen w-screen"
-        ref={decodeRef}
-      >
-        <ToLeft scrollToRef={projectsRef} />
-        <div className="py-20">
+      <section className="snap-start bg-bone flex-shrink-0 h-screen w-screen">
+        <div className="p-4">
+          <ToLeft scrollToElement={scrollToElement} />
+        </div>
+        <div id="decode" className="-mt-2 px-10">
           <Decode />
         </div>
       </section>
-      <section
-        className="snap-start bg-white flex-shrink-0 h-screen w-screen"
-        ref={headlessRef}
-      >
-        <ToLeft scrollToRef={projectsRef} />
-        <div className="">
+      <section className="snap-start bg-bone flex-shrink-0 h-screen w-screen">
+        <div className="p-4">
+          <ToLeft scrollToElement={scrollToElement} />
+        </div>
+        <div id="headless" className="-mt-2 px-10">
           <Headless />
         </div>
       </section>

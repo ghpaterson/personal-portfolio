@@ -1,56 +1,26 @@
-const API_KEY = process.env.API_KEY;
-
-const getPosts = async () => {
-  const response = await fetch(
-    `https://api-eu-west-2.hygraph.com/v2/${API_KEY}/master`,
-    {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Accept: "application/json",
-      },
-      body: JSON.stringify({
-        query: `{
-            posts {
-                id
-                title
-                slug
-                content {
-                  html
-                }
-                photo {
-                  url
-                }
-              }
-            }`,
-      }),
-    }
-  );
-
-  const { data } = await response.json();
-
-  return data.posts;
-};
+import Link from "next/link";
+import ecoliday from "../public/ecoliday-screen.png";
+import Image from "next/image";
 
 export default async function Ecoliday() {
-  const posts = await getPosts();
-
-  const postId = "clh4txg018c4t0amn7alljyfu";
-  const post = posts.find((post) => post.id === postId);
+  const ecolidayURL = "https://ecoliday-cxyz.onrender.com/";
 
   return (
     <main>
       <section>
-        <div
-          className="flex flex-col justify-center items-center gap-2"
-          key={post.id}
-        >
-          <h2 className="font-fungis text-5xl text-blu -mt-10">{post.title}</h2>
-          <img src={post.photo.url} alt={post.title} width={680} />
-          <div
-            className="text-blu"
-            dangerouslySetInnerHTML={{ __html: post.content.html }}
-          />
+        <div className="flex gap-2 ml-10 text-blu font-fungis">
+          <Link href={ecolidayURL} target="_blank">
+            <h2 className="text-8xl text-blu -mt-10">ECOLIDAY</h2>
+          </Link>
+        </div>
+        <div className="flex gap-10">
+          <Image src={ecoliday} width={900} />
+          <h2 className="text-blu text-6xl font-fungis">"click"</h2>
+          <p className="text-blu text-2xl py-4">
+            Ecoliday was designed to let users make informed decisions about
+            their personal travel by comparing the Carbon Emission of various
+            methods of transport
+          </p>
         </div>
       </section>
     </main>
