@@ -7,10 +7,10 @@ export default function ToLeft({ scrollToElement }) {
   return (
     <main>
       <div
-        className="hover:cursor-pointer text-blu text-7xl"
+        className="hover:cursor-pointer text-blu text-6xl py-6 font-fungis"
         onClick={scrollToProjectHome}
       >
-        <BsArrowLeft />
+        "projects"
       </div>
     </main>
   );
