@@ -1,5 +1,6 @@
 import { BsArrowsFullscreen } from "react-icons/bs";
-
+import Image from "next/image";
+import portrait from "../public/portrait-cropped.png";
 import Link from "next/link";
 
 export default async function Hero({ scrollToElement }) {
@@ -31,6 +32,9 @@ export default async function Hero({ scrollToElement }) {
               </div>
             </div>
           </ul>
+          <div className="z-0 mt-10 -ml-10">
+            <Image src={portrait} width={400} />
+          </div>
         </div>
       </section>
       <section>

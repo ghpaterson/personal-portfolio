@@ -50,7 +50,7 @@ export default function Projects({ scrollToElement }) {
         <ToTop scrollToElement={scrollToElement} />
         <div className="flex gap-60">
           <div className="px-8 -mt-6">
-            <Image src="/projects.svg" width={70} height={20} />
+            <Image src="/projectsTitle.svg" width={70} height={20} />
           </div>
           <div className="flex justify-center">
             <ul className="flex flex-col font-fungis text-8xl text-bone gap-2">
