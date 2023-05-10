@@ -15,11 +15,6 @@ export default async function Bloggy() {
         </div>
         <div className="flex gap-10">
           <Image src={bloggy} width={900} />
-          <h1 className="text-blu text-6xl font-fungis">"click"</h1>
-          <p className="text-blu text-2xl">
-            Mister Bloggy is a blog and chat website that my friends and I share
-            things that excite us in the world of music, food and design
-          </p>
         </div>
       </section>
     </main>

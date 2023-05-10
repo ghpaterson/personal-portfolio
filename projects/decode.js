@@ -15,12 +15,6 @@ export default async function Decode() {
         </div>
         <div className="flex gap-10">
           <Image src={decode} width={900} />
-          <h1 className="text-blu text-6xl font-fungis">"click"</h1>
-          <p className="text-blu text-2xl">
-            Decode Care was built in collaboration with Literacy experts in
-            Australia to help young children and those with learning
-            difficulties read
-          </p>
         </div>
       </section>
     </main>

@@ -38,7 +38,7 @@ export default async function Hero({ scrollToElement }) {
         </div>
       </section>
       <section>
-        <div className="flex justify-center my-12 ml-32 text-3xl text-bone">
+        <div className="flex justify-center my-12 ml-32 text-3xl text-bone font-poppins">
           <div>
             <p>Graeme Paterson. Software Developer.</p>
             <p className="ml-8">Career Switcher. London. UK</p>

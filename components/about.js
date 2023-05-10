@@ -14,16 +14,16 @@ export default async function About() {
             <Image src={about} width={70} height={20} />
             <div className="flex flex-col justify-center gap-10 text-6xl text-blu font-fungis py-4">
               <Link href={githubURL} target="_blank">
-                GITHUB
+                "github"
               </Link>
               <Link href={linkedinURL} target="_blank">
-                LINKEDIN
+                "linkedIn"
               </Link>
             </div>
           </div>
           <div className="flex justify-center ml-64 -mt-20">
-            <div className="text-blu w-96 flex flex-col text-xl justify-center gap-4">
-              <h1>From Brisbane, Australia</h1>
+            <div className="text-blu w-96 flex flex-col text-xl justify-center gap-4 font-poppins">
+              <h1 className="text-3xl">From Brisbane, Australia</h1>
               <p>
                 After 10 years as a paramedic, I aim to utilise my passion for
                 technology to serve the community and enhance people's lives in

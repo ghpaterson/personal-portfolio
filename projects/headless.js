@@ -15,11 +15,6 @@ export default async function Headless() {
         </div>
         <div className="flex gap-10">
           <Image src={headless} width={900} />
-          <h1 className="text-blu text-6xl font-fungis">"click"</h1>
-          <p className="text-blu text-2xl">
-            My personal blog where I share all things I'm learning about in the
-            technology, software development and design
-          </p>
         </div>
       </section>
     </main>

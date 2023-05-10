@@ -9,6 +9,7 @@ module.exports = {
     extend: {
       fontFamily: {
         fungis: ["fungis", "sans-serif"],
+        poppins: ["Poppins", "sans-serif"],
       },
       colors: {
         blu: "#2180D8",
