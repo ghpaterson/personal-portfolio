@@ -2,27 +2,18 @@ import Image from "next/image";
 import about from "../public/about.svg";
 import aboutImages from "../public/aboutImages.png";
 import Link from "next/link";
+import { FiArrowUpRight } from "react-icons/fi";
 
 export default async function About() {
   const githubURL = "https://github.com/ghpaterson";
   const linkedinURL = "https://www.linkedin.com/in/graeme-paterson-25b096268/";
   return (
-    <main className="bg-bone h-full w-screen">
+    <main className="bg-bone h-full w-screen bg-fixed">
       <section className="flex justify-between">
         <div className="mt-10">
           <div className="flex items-start gap-44 px-8 py-4">
-            <Image src={about} width={70} height={20} />
-            <div className="flex flex-col justify-center gap-10 text-6xl text-blu font-fungis py-4">
-              <Link href={githubURL} target="_blank">
-                "github"
-              </Link>
-              <Link href={linkedinURL} target="_blank">
-                "linkedIn"
-              </Link>
-            </div>
-          </div>
-          <div className="flex justify-center ml-64 -mt-20">
-            <div className="text-blu w-96 flex flex-col text-xl justify-center gap-4 font-poppins">
+            <Image src={about} width={70} height={20} className="mt-40" />
+            <div className=" w-96 flex flex-col justify-center gap-10 ml-4 text-base text-blu font-poppins py-4">
               <h1 className="text-3xl">From Brisbane, Australia</h1>
               <p>
                 After 10 years as a paramedic, I aim to utilise my passion for
@@ -35,6 +26,16 @@ export default async function About() {
                 hobbies, such as attending live music gigs and experimenting in
                 the kitchen.
               </p>
+              <div className="flex flex-col text-5xl font-fungis mt-20 gap-8">
+                <Link href={githubURL} target="_blank" className="flex">
+                  <h2>github</h2>
+                  <FiArrowUpRight />
+                </Link>
+                <Link href={linkedinURL} target="_blank" className="flex">
+                  <h2>linkedin</h2>
+                  <FiArrowUpRight />
+                </Link>
+              </div>
             </div>
           </div>
         </div>

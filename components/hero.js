@@ -7,7 +7,7 @@ export default async function Hero({ scrollToElement }) {
   const headlessURL = "https://headless-iota-five.vercel.app/";
 
   return (
-    <main className="bg-blu h-screen w-screen">
+    <main className="bg-blu h-screen w-screen bg-fixed">
       <section>
         <div className="flex relative">
           <ul className="flex flex-col font-fungis text-9xl text-bone pt-32 ml-24 z-10">
@@ -40,8 +40,8 @@ export default async function Hero({ scrollToElement }) {
       <section>
         <div className="flex justify-center my-12 ml-32 text-3xl text-bone font-poppins">
           <div>
-            <p>Graeme Paterson. Software Developer.</p>
-            <p className="ml-8">Career Switcher. London. UK</p>
+            <p>Graeme Paterson | Software Developer </p>
+            <p className="ml-8">Career Switcher | London. UK</p>
           </div>
         </div>
       </section>

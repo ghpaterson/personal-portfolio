@@ -6,7 +6,7 @@ export default function ToTop({ scrollToElement }) {
           className=" hover:cursor-pointer"
           onClick={() => scrollToElement("hero")}
         >
-          "up"
+          ^up
         </div>
       </div>
     </nav>

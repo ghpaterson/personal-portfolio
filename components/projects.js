@@ -8,7 +8,7 @@ import Ecoliday from "@/projects/ecoliday";
 import Bloggy from "@/projects/bloggy";
 import Decode from "@/projects/decode";
 import Headless from "@/projects/headless";
-import Click from "@/components/click";
+import Details from "@/components/details";
 const posts = [
   {
     id: 1,
@@ -80,7 +80,7 @@ export default function Projects({ scrollToElement }) {
         <div id="ecoliday" className=" flex  px-10">
           <Ecoliday />
           <div className="px-6 mt-24">
-            <Click
+            <Details
               desc="Ecoliday was built to let users make informed decisions about
                 their personal travel. Users can estimate their carbon emissions
                 using petrol car, electric car, train or commercial air travel"
@@ -96,7 +96,7 @@ export default function Projects({ scrollToElement }) {
         <div id="bloggy" className="flex px-10">
           <Bloggy />
           <div className="px-6 mt-24">
-            <Click
+            <Details
               desc="Mister Bloggy is a blog and chat web application I created so that my friends and I could share some of our favourite things in the world of music, food and design"
               stack="JS | REACT | NEXT | FIREBASE | TAILWIND"
             />
@@ -110,7 +110,7 @@ export default function Projects({ scrollToElement }) {
         <div id="decode" className="flex px-10">
           <Decode />
           <div className="px-6 mt-24">
-            <Click
+            <Details
               desc="Decode Care has been built and designed in collaboration with the Child Development Network to assist children and those with difficulties learn to read. Currently being trialed with constant feedback"
               stack="JS | REACT | NEXT | TAILWIND"
             />
@@ -124,7 +124,7 @@ export default function Projects({ scrollToElement }) {
         <div id="headless" className="flex px-10">
           <Headless />
           <div className="px-6 mt-24">
-            <Click
+            <Details
               desc="My own personal blog! I share my journey learning all things tech, including software development, design and typograph"
               stack="JS | REACT | NEXT | HYGRAPH CMS | GRAPHQL | TAILWIND"
             />
