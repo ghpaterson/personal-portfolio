@@ -3,6 +3,8 @@
 import About from "@/components/about";
 import Projects from "@/components/projects";
 import Hero from "@/components/hero";
+import { motion as m } from "framer-motion";
+import { AnimatePresence } from "framer-motion";
 
 export default function Home() {
   const scrollToElement = (id) => {
@@ -14,15 +16,17 @@ export default function Home() {
 
   return (
     <main>
-      <div id="hero">
-        <Hero scrollToElement={scrollToElement} />
-      </div>
-      <div id="about">
+      <section id="hero">
+        <AnimatePresence>
+          <Hero key="hero" scrollToElement={scrollToElement} />
+        </AnimatePresence>
+      </section>
+      <section id="about">
         <About />
-      </div>
-      <div id="projects">
+      </section>
+      <section id="projects">
         <Projects scrollToElement={scrollToElement} />
-      </div>
+      </section>
     </main>
   );
 }

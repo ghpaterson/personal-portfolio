@@ -1,0 +1,17 @@
+export default function Details({ desc, stack }) {
+  return (
+    <main>
+      <section>
+        <div className="text-4xl lg:text-6xl text-blu font-fungis ">
+          "details"
+        </div>
+        <div className=" w-80 mt-2 lg:mt-6 text-base lg:text-lg text-blu ">
+          <div>
+            <p className="font-poppins">{desc}</p>
+            <p className=" text-base lg:text-xl font-fungis py-6">{stack}</p>
+          </div>
+        </div>
+      </section>
+    </main>
+  );
+}

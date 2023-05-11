@@ -1,4 +1,4 @@
-import { BsArrowLeft } from "react-icons/bs";
+import { FiChevronLeft } from "react-icons/fi";
 
 export default function ToLeft({ scrollToElement }) {
   const scrollToProjectHome = () => {
@@ -6,11 +6,14 @@ export default function ToLeft({ scrollToElement }) {
   };
   return (
     <main>
-      <div
-        className="hover:cursor-pointer text-blu text-6xl py-6 font-fungis"
-        onClick={scrollToProjectHome}
-      >
-        "projects"
+      <div className="flex items-center text-blu text-4xl lg:text-6xl py-2 lg:py-6">
+        <FiChevronLeft />
+        <div
+          className="hover:cursor-pointer mt-1 font-fungis"
+          onClick={scrollToProjectHome}
+        >
+          back
+        </div>
       </div>
     </main>
   );
