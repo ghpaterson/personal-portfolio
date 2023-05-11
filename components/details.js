@@ -10,7 +10,7 @@ export default function Details({ desc, stack }) {
     <main>
       <section>
         <div
-          className="text-6xl text-blu font-fungis hover:cursor-pointer"
+          className="text-6xl text-blu font-fungis "
           // onClick={handleClick}
         >
           "details"

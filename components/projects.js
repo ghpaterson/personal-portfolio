@@ -24,8 +24,8 @@ const posts = [
   },
   {
     id: 3,
-    title: "DECODE CARE",
-    slug: "decode",
+    title: "SPELLQUEST",
+    slug: "spellquest",
     ml: "24",
   },
   {
@@ -107,11 +107,11 @@ export default function Projects({ scrollToElement }) {
         <div className="p-4">
           <ToLeft scrollToElement={scrollToElement} />
         </div>
-        <div id="decode" className="flex px-10">
+        <div id="spellquest" className="flex px-10">
           <Decode />
           <div className="px-6 mt-24">
             <Details
-              desc="Decode Care has been built and designed in collaboration with the Child Development Network to assist children and those with difficulties learn to read. Currently being trialed with constant feedback"
+              desc="Jack's SpellQuest has been built and designed in collaboration with the Child Development Network to assist my nephew Jack on his journey to read. A sister site called Decode Care exists but I wanted to shout-out Jack! Currently being trialed by the kids with constant feedback"
               stack="JS | REACT | NEXT | TAILWIND"
             />
           </div>

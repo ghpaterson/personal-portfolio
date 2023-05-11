@@ -4,12 +4,12 @@ import aboutImages from "../public/aboutImages.png";
 import Link from "next/link";
 import { FiArrowUpRight } from "react-icons/fi";
 
-export default async function About() {
+export default function About() {
   const githubURL = "https://github.com/ghpaterson";
   const linkedinURL = "https://www.linkedin.com/in/graeme-paterson-25b096268/";
   return (
     <main className="bg-bone h-full w-screen bg-fixed">
-      <section className="flex justify-between">
+      <section className="flex justify-between bg-fixed">
         <div className="mt-10">
           <div className="flex items-start gap-44 px-8 py-4">
             <Image src={about} width={70} height={20} className="mt-40" />
@@ -42,6 +42,9 @@ export default async function About() {
         <div className="flex justify-end py-6">
           <Image src={aboutImages} width={700} />
         </div>
+      </section>
+      <section className="bg-bone text-2xl min-w-full py-20 text-blu">
+        <div>Values</div>
       </section>
     </main>
   );
