@@ -8,7 +8,7 @@ export default function Hero({ scrollToElement }) {
   const headlessURL = "https://headless-iota-five.vercel.app/";
 
   return (
-    <main className="bg-blu h-full lg:h-screen w-screen bg-fixed">
+    <main className="bg-blu h-full lg:h-screen lg:w-screen min-w-full bg-fixed">
       <section>
         <div className=" flex flex-col lg:flex-row overflow-hidden">
           <m.ul

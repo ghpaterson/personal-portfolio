@@ -52,9 +52,9 @@ export default function About() {
           <Image src={aboutImages} width={700} />
         </div>
       </section>
-      <section className="bg-bone text-2xl min-w-full py-20 text-blu">
+      {/* <section className="bg-bone text-2xl min-w-full py-20 text-blu">
         <div>Values</div>
-      </section>
+      </section> */}
     </main>
   );
 }

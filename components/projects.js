@@ -44,10 +44,10 @@ export default function Projects({ scrollToElement }) {
     }
   };
   return (
-    <main className="snap-x snap-mandatory h-screen w-screen flex overflow-y-hidden">
+    <main className="snap-x snap-mandatory h-screen min-w-screen flex overflow-y-hidden">
       <section
         id="project-home"
-        className="snap-start bg-blu flex-shrink-0 h-screen w-screen"
+        className="snap-start bg-blu flex-shrink-0 h-screen lg:w-screen w-full"
       >
         <ToTop scrollToElement={scrollToElement} />
         <div className="flex justify-center text-7xl text-bone font-fungis py-4">
