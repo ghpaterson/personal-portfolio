@@ -53,7 +53,7 @@ export default function Projects({ scrollToElement }) {
         </div>
         <div className="flex py-10  lg:py-0 lg:gap-32 lg:-mt-16">
           <div className="flex justify-center">
-            <ul className="flex flex-col items-center font-fungis text-6xl lg:text-9xl lg:-my-4 lg:ml-60 text-bone gap-2">
+            <ul className="flex flex-col items-center font-fungis text-6xl lg:text-9xl lg:-my-32 lg:ml-72 text-bone gap-2">
               {posts.map((post) => (
                 <div key={post.id}>
                   <div

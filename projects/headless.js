@@ -13,7 +13,7 @@ export default function Headless() {
           <Link href={headlessURL} target="_blank">
             <h2 className="  -mt-10">HEADLESS</h2>
           </Link>
-          <h2>04</h2>
+          <h2 className="px-10">04</h2>
         </div>
         <div className="flex py-10">
           <Image src={headlessMac} width={700} />

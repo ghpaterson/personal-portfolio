@@ -13,7 +13,7 @@ export default function Ecoliday() {
           <Link href={ecolidayURL} target="_blank">
             <h2 className="  -mt-10">ECOLIDAY</h2>
           </Link>
-          <h2>01</h2>
+          <h2 className="px-10">01</h2>
         </div>
         <div className="flex py-10">
           <Image src={ecolidayMac} width={700} alt="ecoliday screen" />
