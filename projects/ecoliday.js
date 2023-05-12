@@ -8,13 +8,13 @@ export default function Ecoliday() {
   return (
     <main>
       <section>
-        <div className="flex gap-2 lg:ml-10 text-blu font-fungis">
+        <div className="flex gap-2  text-blu font-fungis">
           <Link href={ecolidayURL} target="_blank">
             <h2 className=" text-4xl lg:text-6xl text-blu -mt-10">ECOLIDAY</h2>
           </Link>
         </div>
         <div className="relative bg-blu p-4">
-          <Image src={ecoliday} width={900} alt="ecoliday screen" />
+          <Image src={ecoliday} width={880} alt="ecoliday screen" />
         </div>
       </section>
     </main>

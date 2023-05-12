@@ -15,7 +15,7 @@ export default function Hero({ scrollToElement }) {
             initial={{ y: "100%" }}
             animate={{ y: "0%" }}
             transition={{ duration: 1 }}
-            className="flex flex-col font-fungis text-7xl lg:text-9xl text-bone pt-32 ml-16 lg:ml-24 z-10 "
+            className="flex flex-col font-fungis text-7xl lg:text-9xl text-bone pt-32 ml-20 lg:ml-36 z-10 "
           >
             <div
               className="hover:cursor-pointer"
@@ -42,7 +42,7 @@ export default function Hero({ scrollToElement }) {
             initial={{ x: "100%", opacity: 0 }}
             animate={{ x: "0%", opacity: 1 }}
             transition={{ duration: 0.75, ease: "easeOut" }}
-            className="z-0 -mt-72 ml-6 lg:mt-10 lg:-ml-10 overflow-hidden"
+            className="z-0 -mt-72 ml-6 lg:mt-10 lg:-ml-10 px-10 lg:px-0 overflow-hidden"
           >
             <Image src={portrait} width={450} />
           </m.div>
@@ -53,7 +53,7 @@ export default function Hero({ scrollToElement }) {
         animate={{ opacity: 1 }}
         transition={{ duration: 0.75, ease: "easeOut" }}
       >
-        <div className="flex justify-center py-8 lg:my-10 lg:ml-32 text-base lg:text-3xl text-bone font-poppins">
+        <div className="flex justify-center py-8 lg:ml-32 text-base lg:text-2xl text-bone font-poppins">
           <div>
             <p>Graeme Paterson | Software Developer </p>
             <p className="ml-8">Career Switcher | London. UK</p>

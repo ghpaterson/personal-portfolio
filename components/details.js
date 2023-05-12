@@ -1,7 +1,7 @@
 export default function Details({ desc, stack }) {
   return (
     <main>
-      <section>
+      <section className="lg:px-12">
         <div className="text-4xl lg:text-6xl text-blu font-fungis ">
           "details"
         </div>

@@ -8,7 +8,7 @@ export default function Decode() {
   return (
     <main>
       <section>
-        <div className="flex gap-2 lg:ml-10 text-blu font-fungis">
+        <div className="flex gap-2  text-blu font-fungis">
           <Link href={spellquestURL} target="_blank">
             <h2 className="text-4xl lg:text-6xl text-blu -mt-10">
               JACK'S SPELLQUEST
@@ -16,7 +16,7 @@ export default function Decode() {
           </Link>
         </div>
         <div className="relative bg-blu p-4">
-          <Image src={spellquest} width={900} />
+          <Image src={spellquest} width={880} />
         </div>
       </section>
     </main>

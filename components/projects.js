@@ -1,5 +1,3 @@
-"use client";
-
 import ToTop from "@/components/totop";
 import ToLeft from "@/components/toleft";
 import Smiley from "@/components/smiley";
@@ -53,7 +51,7 @@ export default function Projects({ scrollToElement }) {
         <div className="flex justify-center text-7xl text-bone font-fungis py-4">
           <h2 className="lg:hidden">"projects"</h2>
         </div>
-        <div className="flex py-10  lg:py-0 lg:gap-32 lg:-mt-10">
+        <div className="flex py-10  lg:py-0 lg:gap-32 lg:-mt-16">
           <div className="px-8 mt-4">
             <Image
               src="/projectsTitle.svg"
@@ -63,7 +61,7 @@ export default function Projects({ scrollToElement }) {
             />
           </div>
           <div className="flex justify-center">
-            <ul className="flex flex-col items-center font-fungis text-6xl lg:text-9xl text-bone gap-2">
+            <ul className="flex flex-col items-center font-fungis text-6xl lg:text-9xl lg:-my-2 lg:-ml-6 text-bone gap-2">
               {posts.map((post) => (
                 <div key={post.id}>
                   <div
