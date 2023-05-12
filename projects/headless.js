@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
-import headless from "../public/headlessscreen2.png";
+import headlessMac from "../public/headlessMac.png";
+import headlessPhone from "../public/headlessPhone.png";
 
 export default function Headless() {
   const headlessURL = "https://headless-iota-five.vercel.app/";
@@ -8,13 +9,15 @@ export default function Headless() {
   return (
     <main>
       <section>
-        <div className="flex gap-2 lg:ml-10 text-blu font-fungis">
+        <div className="flex justify-between gap-2 text-4xl lg:text-6xl text-bone font-fungis">
           <Link href={headlessURL} target="_blank">
-            <h2 className="text-4xl lg:text-6xl text-blu -mt-10">HEADLESS</h2>
+            <h2 className="  -mt-10">HEADLESS</h2>
           </Link>
+          <h2 className="px-10">04</h2>
         </div>
-        <div className="relative bg-blu p-4">
-          <Image src={headless} width={900} />
+        <div className="flex py-10">
+          <Image src={headlessMac} width={700} />
+          <Image src={headlessPhone} width={200} />
         </div>
       </section>
     </main>

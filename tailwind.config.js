@@ -13,7 +13,7 @@ module.exports = {
       },
       colors: {
         blu: "#2180D8",
-        bone: "#EFECE6",
+        bone: "#FFFFFC",
       },
     },
   },

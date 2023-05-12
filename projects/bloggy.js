@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
-import bloggy from "../public/bloggyscreen2.png";
+import bloggyPhone from "../public/bloggyPhone.png";
+import bloggyMac from "../public/bloggyMac.png";
 
 export default function Bloggy() {
   const bloggyURL = "https://bloggy-inky.vercel.app/";
@@ -8,15 +9,15 @@ export default function Bloggy() {
   return (
     <main>
       <section>
-        <div className="flex gap-2 lg:ml-10 text-blu font-fungis">
+        <div className=" flex justify-between gap-2 text-4xl lg:text-6xl   text-bone font-fungis">
           <Link href={bloggyURL} target="_blank">
-            <h2 className=" text-4xl lg:text-6xl text-blu -mt-10">
-              MISTER BLOGGY
-            </h2>
+            <h2 className="  -mt-10">MISTER BLOGGY</h2>
           </Link>
+          <h2 className="px-10">02</h2>
         </div>
-        <div className="relative bg-blu p-4">
-          <Image src={bloggy} width={900} />
+        <div className="flex py-10">
+          <Image src={bloggyMac} width={700} />
+          <Image src={bloggyPhone} width={200} />
         </div>
       </section>
     </main>
