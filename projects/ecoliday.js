@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import ecolidayMac from "../public/ecolidayMac.png";
+import ecolidayPad from "../public/ecolidayPad.png";
 
 export default function Ecoliday() {
   const ecolidayURL = "https://ecoliday-cxyz.onrender.com/";
@@ -16,6 +17,7 @@ export default function Ecoliday() {
         </div>
         <div className="flex py-10">
           <Image src={ecolidayMac} width={700} alt="ecoliday screen" />
+          <Image src={ecolidayPad} width={300} alt="ecoliday pad" />
         </div>
       </section>
     </main>

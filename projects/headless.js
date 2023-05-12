@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
-import headless from "../public/headlessscreen2.png";
 import headlessMac from "../public/headlessMac.png";
+import headlessPhone from "../public/headlessPhone.png";
 
 export default function Headless() {
   const headlessURL = "https://headless-iota-five.vercel.app/";
@@ -17,6 +17,7 @@ export default function Headless() {
         </div>
         <div className="flex py-10">
           <Image src={headlessMac} width={700} />
+          <Image src={headlessPhone} width={200} />
         </div>
       </section>
     </main>
