@@ -6,7 +6,7 @@ export default function ToLeft({ scrollToElement }) {
   };
   return (
     <main>
-      <div className="flex items-center text-blu text-4xl lg:text-5xl py-2 lg:py-2">
+      <div className="flex items-center text-bone text-4xl lg:text-5xl py-2 lg:py-2">
         <FiChevronLeft />
         <div
           className="hover:cursor-pointer mt-1 font-fungis"

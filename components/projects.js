@@ -52,16 +52,8 @@ export default function Projects({ scrollToElement }) {
           <h2 className="lg:hidden">"projects"</h2>
         </div>
         <div className="flex py-10  lg:py-0 lg:gap-32 lg:-mt-16">
-          <div className="px-8 mt-4">
-            <Image
-              src="/projectsTitle.svg"
-              width={70}
-              height={20}
-              className="hidden sm:block"
-            />
-          </div>
           <div className="flex justify-center">
-            <ul className="flex flex-col items-center font-fungis text-6xl lg:text-9xl lg:-my-2 lg:-ml-6 text-bone gap-2">
+            <ul className="flex flex-col items-center font-fungis text-6xl lg:text-9xl lg:-my-4 lg:ml-60 text-bone gap-2">
               {posts.map((post) => (
                 <div key={post.id}>
                   <div
@@ -79,7 +71,7 @@ export default function Projects({ scrollToElement }) {
           <Smiley />
         </div>
       </section>
-      <section className="snap-start bg-bone flex-shrink-0 h-screen w-screen">
+      <section className="snap-start flex-shrink-0 h-screen w-screen">
         <div className="p-4">
           <ToLeft scrollToElement={scrollToElement} />
         </div>
@@ -95,7 +87,7 @@ export default function Projects({ scrollToElement }) {
           </div>
         </div>
       </section>
-      <section className="snap-start bg-bone flex-shrink-0 h-screen w-screen">
+      <section className="snap-start  flex-shrink-0 h-screen w-screen">
         <div className="p-4">
           <ToLeft scrollToElement={scrollToElement} />
         </div>
@@ -109,7 +101,7 @@ export default function Projects({ scrollToElement }) {
           </div>
         </div>
       </section>
-      <section className="snap-start bg-bone flex-shrink-0 h-screen w-screen">
+      <section className="snap-start  flex-shrink-0 h-screen w-screen">
         <div className="p-4">
           <ToLeft scrollToElement={scrollToElement} />
         </div>
@@ -123,7 +115,7 @@ export default function Projects({ scrollToElement }) {
           </div>
         </div>
       </section>
-      <section className="snap-start bg-bone flex-shrink-0 h-screen w-screen">
+      <section className="snap-start flex-shrink-0 h-screen w-screen">
         <div className="p-4">
           <ToLeft scrollToElement={scrollToElement} />
         </div>

@@ -1,6 +1,6 @@
 import Link from "next/link";
-import ecoliday from "../public/ecoliday-screen.png";
 import Image from "next/image";
+import ecolidayMac from "../public/ecolidayMac.png";
 
 export default function Ecoliday() {
   const ecolidayURL = "https://ecoliday-cxyz.onrender.com/";
@@ -8,13 +8,14 @@ export default function Ecoliday() {
   return (
     <main>
       <section>
-        <div className="flex gap-2  text-blu font-fungis">
+        <div className="flex justify-between gap-2 text-4xl lg:text-6xl text-bone font-fungis">
           <Link href={ecolidayURL} target="_blank">
-            <h2 className=" text-4xl lg:text-6xl text-blu -mt-10">ECOLIDAY</h2>
+            <h2 className="  -mt-10">ECOLIDAY</h2>
           </Link>
+          <h2>01</h2>
         </div>
-        <div className="relative bg-blu p-4">
-          <Image src={ecoliday} width={880} alt="ecoliday screen" />
+        <div className="flex py-10">
+          <Image src={ecolidayMac} width={700} alt="ecoliday screen" />
         </div>
       </section>
     </main>
