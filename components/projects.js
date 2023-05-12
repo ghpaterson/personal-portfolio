@@ -121,7 +121,7 @@ export default function Projects({ scrollToElement }) {
           <Headless />
           <div className="lg:px-6 lg:mt-24 mt-6">
             <Details
-              desc="Gosh! The world of Tech is exhausting. I'm trying to cram as mush as I can inside my aging brain. This is my personal blog where I share all the things I'm learning to no-one in particular. Probably not a high traffic site. I'm trying to keep active on there but this portfolio has taken longer than expected"
+              desc="Gosh! The world of Tech is exhausting. I'm trying to cram as much as I can inside my aging brain. This is my personal blog where I share all the things I'm learning to no-one in particular. Probably not a high traffic site. I'm trying to keep active on there but this portfolio has taken longer than expected"
               stack="JS | REACT | NEXT | HYGRAPH CMS | GRAPHQL | TAILWIND"
             />
           </div>

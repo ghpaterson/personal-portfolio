@@ -15,7 +15,7 @@ export default function About() {
           <div className="p-8">
             <Image src={aboutCircle} width={200} />
           </div>
-          <div className=" flex flex-col justify-center items-center gap-4 w-96 lg:ml-52 lg:py-10 text-blu lg:text-3xl font-poppins">
+          <div className=" flex flex-col justify-center items-center gap-4 w-96 lg:ml-52 lg:py-6 text-blu lg:text-2xl font-poppins">
             <h1 className="lg:text-4xl">Hi, Im Graeme </h1>
             <p>
               I have been a Paramedic for over ten years,
