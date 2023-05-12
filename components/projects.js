@@ -10,24 +10,28 @@ import Details from "@/components/details";
 const posts = [
   {
     id: 1,
+    number: "01",
     title: "ECOLIDAY",
     slug: "ecoliday",
     ml: "0",
   },
   {
     id: 2,
+    number: "02",
     title: "MR BLOGGY",
     slug: "bloggy",
     ml: "8",
   },
   {
     id: 3,
+    number: "03",
     title: "SPELLQUEST",
     slug: "spellquest",
     ml: "24",
   },
   {
     id: 4,
+    number: "04",
     title: "HEADLESS",
     slug: "headless",
     ml: "32",
@@ -60,6 +64,7 @@ export default function Projects({ scrollToElement }) {
                     className={`hover:underline hover:cursor-pointer lg:ml-${post.ml}`}
                     onClick={() => scrollToProject(post.slug)}
                   >
+                    <span className="lg:text-3xl px-2">{post.number}</span>
                     {post.title}
                   </div>
                 </div>
