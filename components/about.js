@@ -39,9 +39,9 @@ export default function About() {
           alt="picnic"
           className="p-2 opacity-90 ml-20 bg-blu -mt-16"
         />
-        <div className="text-8xl mt-10">
+        {/* <div className="text-8xl mt-10">
           <BsMusicNote />
-        </div>
+        </div> */}
         <Image
           src={ambulance}
           width={375}
