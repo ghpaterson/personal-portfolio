@@ -53,10 +53,12 @@ export default function Hero({ scrollToElement }) {
         animate={{ opacity: 1 }}
         transition={{ duration: 0.75, ease: "easeOut" }}
       >
-        <div className="flex justify-center py-8 lg:ml-32 text-base lg:text-2xl text-bone font-poppins">
+        <div className="flex justify-center py-8 lg:ml-32 text-base lg:text-3xl text-bone font-poppins">
           <div>
-            <p>Graeme Paterson | Software Developer </p>
-            <p className="ml-8">Career Switcher | London. UK</p>
+            <p>
+              Graeme Paterson <span className="text-orange-800">|</span>{" "}
+              Software Developer{" "}
+            </p>
           </div>
         </div>
       </m.section>

@@ -11,7 +11,7 @@ export default function Headless() {
       <section>
         <div className="flex justify-between gap-2 text-4xl lg:text-6xl text-bone font-fungis">
           <Link href={headlessURL} target="_blank">
-            <h2 className="  -mt-10">HEADLESS</h2>
+            <h2 className=" ">HEADLESS</h2>
           </Link>
           <h2 className="px-10">04</h2>
         </div>

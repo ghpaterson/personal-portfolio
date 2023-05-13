@@ -1,39 +1,61 @@
 import Image from "next/image";
-import aboutImages from "../public/aboutImages.png";
 import aboutCircle from "../public/aboutCircle.svg";
+import londonBeach from "../public/londonBeach.png";
+import picnic from "../public/picnic.png";
+import ambulance from "../public/ambulance.png";
+import { BsMusicNote } from "react-icons/bs";
 
 export default function About() {
   const githubURL = "https://github.com/ghpaterson";
   const linkedinURL = "https://www.linkedin.com/in/graeme-paterson-25b096268/";
   return (
     <main className="bg-bone h-full w-screen bg-fixed">
-      <div className="flex justify-center text-7xl text-blu font-fungis py-4 mt-10">
+      <section
+        id="small-screen"
+        className="flex justify-center text-7xl text-blu font-fungis py-4 mt-10"
+      >
         <h2 className="lg:hidden">"about"</h2>
-      </div>
-      <div className="flex justify-between ">
-        <section className="flex flex-col">
-          <div className="p-8">
-            <Image src={aboutCircle} width={200} />
-          </div>
-          <div className=" flex flex-col justify-center items-center gap-4 w-96 lg:ml-52 lg:py-6 text-blu lg:text-2xl font-poppins">
-            <h1 className="lg:text-4xl">Hi, Im Graeme </h1>
-            <p>
-              I have been a Paramedic for over ten years,
-              <span className="bg-blu text-bone">
-                {" "}
-                nightshifts weren't great.
-              </span>{" "}
-              My Love of tech has lead me to a new career as a Software Dev.
-            </p>
-            <p>I'm quite fond of music, cooking and sports, lots of sports. </p>
-          </div>
-        </section>
-        <section>
-          <div className="hidden lg:flex py-6">
-            <Image src={aboutImages} width={700} />
-          </div>
-        </section>
-      </div>
+      </section>
+      <section className="flex items-center">
+        <div className="px-8 mt-4">
+          <Image src={aboutCircle} width={200} />
+        </div>
+        <h1 className="text-blu text-7xl font-fungis px-10">LONDON, UK</h1>
+        <Image
+          src={londonBeach}
+          width={350}
+          alt="london-beach"
+          className="bg-blu p-2 ml-6 opacity-90"
+        />
+      </section>
+      <section className="flex justify-center text-blu text-7xl font-fungis ml-32 -mt-10">
+        <h2>CAREER</h2>
+        <h2 className="mt-16 -ml-10">SWITCHER</h2>
+      </section>
+      <section className="flex justify-between text-blu  font-fungis py-4 px-6">
+        <Image
+          src={picnic}
+          width={500}
+          alt="picnic"
+          className="p-2 opacity-90 ml-20 bg-blu -mt-16"
+        />
+        <div className="text-8xl mt-10">
+          <BsMusicNote />
+        </div>
+        <Image
+          src={ambulance}
+          width={375}
+          alt="ambulance"
+          className="bg-blu p-2 mr-20"
+        />
+      </section>
+      <section className="flex justify-between items-center text-bone text-7xl font-fungis px-16">
+        <div className="flex flex-col items-center text-blu text-4xl p-2 ml-12">
+          <h3>JAVASCRIPT . REACT . RUBY</h3>
+          <h3>MUSIC . FOOD . SPORTS</h3>
+        </div>
+        <h2 className="bg-blu p-1">EX-PARAMEDIC</h2>
+      </section>
     </main>
   );
 }

@@ -11,7 +11,7 @@ export default function Ecoliday() {
       <section>
         <div className="flex justify-between gap-2 text-4xl lg:text-6xl text-bone font-fungis">
           <Link href={ecolidayURL} target="_blank">
-            <h2 className="  -mt-10">ECOLIDAY</h2>
+            <h2 className="">ECOLIDAY</h2>
           </Link>
           <h2 className="px-10">01</h2>
         </div>
