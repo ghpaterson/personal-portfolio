@@ -3,7 +3,7 @@ export default function Details({ desc, stack }) {
     <main>
       <section className="lg:px-12">
         <div className="text-4xl lg:text-6xl text-bone font-fungis ">
-          "details"
+          the brief
         </div>
         <div className=" w-80 mt-2 lg:mt-6 text-base lg:text-lg text-bone ">
           <div>
