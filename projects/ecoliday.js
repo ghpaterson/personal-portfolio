@@ -17,7 +17,7 @@ export default function Ecoliday() {
         </div>
         <div className="flex py-10">
           <Image src={ecolidayMac} width={700} alt="ecoliday screen" />
-          <Image src={ecolidayPad} width={300} alt="ecoliday pad" />
+          <Image src={ecolidayPad} width={250} alt="ecoliday pad" />
         </div>
       </section>
     </main>

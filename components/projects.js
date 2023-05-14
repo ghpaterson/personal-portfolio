@@ -1,12 +1,12 @@
 import ToTop from "@/components/totop";
 import ToLeft from "@/components/toleft";
 import Smiley from "@/components/smiley";
-import Image from "next/image";
 import Ecoliday from "@/projects/ecoliday";
 import Bloggy from "@/projects/bloggy";
 import Decode from "@/projects/decode";
 import Headless from "@/projects/headless";
 import Details from "@/components/details";
+import Reveal from "@/components/utils/reveal";
 const posts = [
   {
     id: 1,
@@ -55,23 +55,26 @@ export default function Projects({ scrollToElement }) {
         <div className="flex justify-center text-7xl text-bone font-fungis py-4">
           <h2 className="lg:hidden">"projects"</h2>
         </div>
-        <div className="flex py-10  lg:py-0 lg:gap-32 lg:-mt-16">
-          <div className="flex justify-center">
-            <ul className="flex flex-col items-center font-fungis text-6xl lg:text-9xl lg:-my-32 lg:ml-72 text-bone gap-2">
-              {posts.map((post) => (
-                <div key={post.id}>
-                  <div
-                    className={`hover:underline hover:cursor-pointer lg:ml-${post.ml}`}
-                    onClick={() => scrollToProject(post.slug)}
-                  >
-                    <span className="lg:text-3xl px-2">{post.number}</span>
-                    {post.title}
+        <Reveal>
+          <div className="flex py-10  lg:py-0 lg:gap-32 lg:-mt-16">
+            <div className="flex justify-center">
+              <ul className="flex flex-col items-center font-fungis text-6xl lg:text-9xl lg:-mt-40 lg:ml-72 text-bone gap-2">
+                {posts.map((post) => (
+                  <div key={post.id}>
+                    <div
+                      className={`hover:underline hover:cursor-pointer lg:ml-${post.ml}`}
+                      onClick={() => scrollToProject(post.slug)}
+                    >
+                      <span className="lg:text-3xl px-2">{post.number}</span>
+                      {post.title}
+                    </div>
                   </div>
-                </div>
-              ))}
-            </ul>
+                ))}
+              </ul>
+            </div>
           </div>
-        </div>
+        </Reveal>
+
         <div>
           <Smiley />
         </div>
@@ -81,7 +84,9 @@ export default function Projects({ scrollToElement }) {
           <ToLeft scrollToElement={scrollToElement} />
         </div>
         <div id="ecoliday" className=" lg:flex  px-10">
-          <Ecoliday />
+          <Reveal>
+            <Ecoliday />
+          </Reveal>
           <div className="lg:px-6 lg:mt-24 mt-6">
             <Details
               desc="Do you feel guilty about your Carbon Emission? You should. Peep what your personal emission are for your 'work trip' to Amsterdam. Maybe take the train - It's a lot better for the Mother Earth. Trust me, I spent a lot of time on this site"
@@ -95,7 +100,9 @@ export default function Projects({ scrollToElement }) {
           <ToLeft scrollToElement={scrollToElement} />
         </div>
         <div id="bloggy" className="lg:flex px-10">
-          <Bloggy />
+          <Reveal>
+            <Bloggy />
+          </Reveal>
           <div className="lg:px-6 lg:mt-24 mt-6">
             <Details
               desc="Do my friends and I like nice things? Yes. Do we like to share nice things with each? Sometimes. Mister Bloggy is a social media web app that lets us be pretencious about anything in the world of music, food and design. It's not really a secret "
@@ -109,7 +116,9 @@ export default function Projects({ scrollToElement }) {
           <ToLeft scrollToElement={scrollToElement} />
         </div>
         <div id="spellquest" className="lg:flex px-10">
-          <Decode />
+          <Reveal>
+            <Decode />
+          </Reveal>
           <div className="lg:px-6 lg:mt-24 mt-6">
             <Details
               desc="Jack's SpellQuest has been built and designed in collaboration with the Child Development Network to assist my nephew Jack on his journey to stay in school (he's five). A sister site called Decode Care exists but I wanted to shout-out Jack! Currently being trialed by the kids with constant feedback"
@@ -123,7 +132,9 @@ export default function Projects({ scrollToElement }) {
           <ToLeft scrollToElement={scrollToElement} />
         </div>
         <div id="headless" className="lg:flex px-10">
-          <Headless />
+          <Reveal>
+            <Headless />
+          </Reveal>
           <div className="lg:px-6 lg:mt-24 mt-6">
             <Details
               desc="Gosh! The world of Tech is exhausting. I'm trying to cram as much as I can inside my aging brain. This is my personal blog where I share all the things I'm learning to no-one in particular. Probably not a high traffic site. I'm trying to keep active on there but this portfolio has taken longer than expected"
