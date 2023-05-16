@@ -5,6 +5,7 @@ import Projects from "@/components/projects";
 import Hero from "@/components/hero";
 import { AnimatePresence } from "framer-motion";
 import Reveal from "@/components/utils/reveal";
+import Skills from "@/components/skills";
 
 export default function Home() {
   const scrollToElement = (id) => {
@@ -21,11 +22,12 @@ export default function Home() {
           <Hero key="hero" scrollToElement={scrollToElement} />
         </AnimatePresence>
       </section>
-      {/* <Reveal> */}
       <section id="about">
         <About />
       </section>
-      {/* </Reveal> */}
+      <section id="skills">
+        <Skills />
+      </section>
       <Reveal>
         <section id="projects">
           <Projects scrollToElement={scrollToElement} />

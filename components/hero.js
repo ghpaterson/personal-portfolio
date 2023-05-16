@@ -12,16 +12,22 @@ export default function Hero({ scrollToElement }) {
       <section>
         <div className=" flex flex-col lg:flex-row overflow-hidden">
           <m.ul
-            initial={{ y: "100%" }}
-            animate={{ y: "0%" }}
-            transition={{ duration: 1 }}
-            className="flex flex-col font-fungis text-7xl lg:text-9xl text-bone pt-32 ml-20 lg:ml-36 z-10 "
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 2, delay: 0.25, ease: "easeIn" }}
+            className="flex flex-col font-fungis text-7xl lg:text-9xl text-bone pt-16 ml-20 lg:ml-36 z-10 "
           >
             <div
               className="hover:cursor-pointer"
               onClick={() => scrollToElement("about")}
             >
               ABOUT
+            </div>
+            <div
+              className="hover:cursor-pointer ml-4"
+              onClick={() => scrollToElement("skills")}
+            >
+              SKILLS
             </div>
             <div
               className="hover:cursor-pointer"

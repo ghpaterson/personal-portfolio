@@ -1,9 +1,9 @@
 import Image from "next/image";
+import Link from "next/link";
 import aboutCircle from "../public/aboutCircle.svg";
-import londonBeach from "../public/londonBeach.png";
-import picnic from "../public/picnic.png";
-import ambulance from "../public/ambulance.png";
 import Reveal from "@/components/utils/reveal";
+import { GoSync } from "react-icons/go";
+import { BsGithub, BsLinkedin } from "react-icons/bs";
 
 export default function About() {
   const githubURL = "https://github.com/ghpaterson";
@@ -19,51 +19,50 @@ export default function About() {
         </section>
       </Reveal>
       <Reveal>
-        <section className="flex items-center">
+        <section className="flex justify-start items-end pb-6">
           <div className="px-8 mt-4">
             <Image src={aboutCircle} width={200} />
           </div>
-          <h1 className="text-blu text-7xl font-fungis px-10">LONDON, UK</h1>
-          <Image
-            src={londonBeach}
-            width={350}
-            alt="london-beach"
-            className="bg-blu p-2 ml-6 opacity-90"
-          />
-        </section>
-      </Reveal>
-      <Reveal>
-        <section className="flex justify-center text-blu text-7xl font-fungis ml-32 -mt-10">
-          <h2>CAREER</h2>
-          <h2 className="mt-16 -ml-10">SWITCHER</h2>
-        </section>
-      </Reveal>
-      <Reveal>
-        <section className="flex justify-between text-blu  font-fungis py-4 px-6">
-          <Image
-            src={picnic}
-            width={500}
-            alt="picnic"
-            className="p-2 opacity-90 ml-20 bg-blu -mt-16"
-          />
-
-          <Image
-            src={ambulance}
-            width={375}
-            alt="ambulance"
-            className="bg-blu p-2 mr-20"
-          />
-        </section>
-      </Reveal>
-      <Reveal>
-        <section className="flex justify-between items-center text-bone text-7xl font-fungis px-16">
-          <div className="flex flex-col items-center text-blu text-4xl p-2 ml-12">
-            <h3>JAVASCRIPT . REACT . RUBY</h3>
-            <h3>MUSIC . FOOD . SPORTS</h3>
+          <div className="flex flex-col items-center justify-center gap-6 text-blu text-5xl font-fungis">
+            <div className="flex items-center gap-6 -mt-4">
+              <Link href={githubURL} target="_blank">
+                <BsGithub />
+              </Link>
+              <Link href={linkedinURL} target="_blank">
+                <BsLinkedin />
+              </Link>
+              <Link href="/CV.pdf" target="_blank">
+                <h1 className="mt-4 text-6xl">CV</h1>
+              </Link>
+            </div>
+            <h1 className="text-blu text-8xl font-fungis mx-40">LONDON, UK</h1>
           </div>
-          <h2 className="bg-blu p-1">EX-PARAMEDIC</h2>
         </section>
       </Reveal>
+      <Reveal>
+        <section className="flex justify-center gap-10 text-blu text-8xl font-fungis ">
+          <h2>CAREER</h2>
+          <GoSync />
+          <h2>SWITCHER</h2>
+        </section>
+      </Reveal>
+      <Reveal>
+        <section className="flex justify-between text-blu  font-fungis py-4 px-6"></section>
+      </Reveal>
+
+      <section className="flex flex-col gap-4 justify-between items-center text-blu text-8xl font-fungis pb-4 ">
+        <Reveal>
+          <div className="flex flex-col items-center gap-4">
+            <h3>MUSIC, FOOD, SPORTS &</h3>
+            <h3>DESIGN ENTHUSIAST</h3>
+          </div>
+        </Reveal>
+        <Reveal>
+          <div className="bg-blu text-bone flex items-center">
+            <h2 className=" pt-4 px-2">EX-PARAMEDIC</h2>
+          </div>
+        </Reveal>
+      </section>
     </main>
   );
 }
