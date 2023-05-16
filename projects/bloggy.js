@@ -20,7 +20,7 @@ export default function Bloggy() {
         <div className="p-4">
           <ToLeft scrollToElement={scrollToElement} />
         </div>
-        <div className=" flex justify-between gap-2 text-4xl lg:text-6xl   text-bone font-fungis">
+        <div className=" flex justify-between gap-2 text-3xl lg:text-6xl   text-bone font-fungis">
           <Link href={bloggyURL} target="_blank">
             <h2 className=" ">MISTER BLOGGY</h2>
           </Link>
@@ -28,7 +28,9 @@ export default function Bloggy() {
         </div>
         <div className="flex mt-2">
           <Image src={bloggyMac} width={700} />
-          <Image src={bloggyPhone} width={200} />
+          <div className="sm:hidden">
+            <Image src={bloggyPhone} width={200} />
+          </div>
         </div>
       </section>
     </main>

@@ -52,12 +52,10 @@ export default function Projects({ scrollToElement }) {
         className="snap-start bg-blu flex-shrink-0 min-h-screen min-w-full lg:w-screen bg-fixed"
       >
         <ToTop scrollToElement={scrollToElement} />
-        <div className="flex justify-center text-7xl text-bone font-fungis py-4">
-          <h2 className="lg:hidden">"projects"</h2>
-        </div>
-        <div className="flex py-10  lg:py-0 lg:gap-32 lg:-mt-16">
+
+        <div className="flex ml-14 lg:ml-0 lg:py-0 lg:gap-32 lg:-mt-16">
           <div className="flex justify-center">
-            <ul className="flex flex-col items-center font-fungis text-6xl lg:text-9xl lg:-mt-40 lg:ml-72 text-bone gap-2">
+            <ul className="flex flex-col items-center font-fungis text-5xl lg:text-9xl lg:-mt-40 lg:ml-72 text-bone gap-2">
               {posts.map((post) => (
                 <div key={post.id}>
                   <div
@@ -65,7 +63,9 @@ export default function Projects({ scrollToElement }) {
                     onClick={() => scrollToProject(post.slug)}
                   >
                     <Reveal>
-                      <span className="lg:text-3xl px-2">{post.number}</span>
+                      <span className="text-sm lg:text-3xl px-2">
+                        {post.number}
+                      </span>
                       {post.title}
                     </Reveal>
                   </div>
@@ -84,7 +84,7 @@ export default function Projects({ scrollToElement }) {
           <Reveal>
             <Ecoliday />
           </Reveal>
-          <div className="flex items-center justify-center lg:px-6 lg:mt-32 mt-6">
+          <div className="flex items-center lg:px-6 lg:mt-32 mt-6">
             <Details
               desc="Do you feel guilty about your Carbon Emission? You should. Peep what your personal emission are for your 'work trip' to Amsterdam. Maybe take the train - It's a lot better for the Mother Earth. Trust me, I spent a lot of time on this site"
               stack="JS | REACT | EXPRESS | NODE | MONGODB | TAILWIND"

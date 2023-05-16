@@ -20,7 +20,7 @@ export default function Headless() {
         <div className="p-4">
           <ToLeft scrollToElement={scrollToElement} />
         </div>
-        <div className="flex justify-between gap-2 text-4xl lg:text-6xl text-bone font-fungis">
+        <div className="flex justify-between gap-2 text-3xl lg:text-6xl text-bone font-fungis">
           <Link href={headlessURL} target="_blank">
             <h2 className=" ">HEADLESS</h2>
           </Link>
@@ -28,7 +28,9 @@ export default function Headless() {
         </div>
         <div className="flex mt-2">
           <Image src={headlessMac} width={700} />
-          <Image src={headlessPhone} width={200} />
+          <div className="sm:hidden">
+            <Image src={headlessPhone} width={200} />
+          </div>
         </div>
       </section>
     </main>

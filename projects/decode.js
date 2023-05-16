@@ -20,7 +20,7 @@ export default function Decode() {
         <div className="p-4">
           <ToLeft scrollToElement={scrollToElement} />
         </div>
-        <div className="flex justify-between text-4xl lg:text-6xl  text-bone font-fungis">
+        <div className="flex justify-between text-3xl lg:text-6xl  text-bone font-fungis">
           <Link href={spellquestURL} target="_blank">
             <h2 className=" ">JACK'S SPELLQUEST</h2>
           </Link>
@@ -28,7 +28,9 @@ export default function Decode() {
         </div>
         <div className="flex mt-2">
           <Image src={jackMac1} width={700} />
-          <Image src={jackPhone} width={200} />
+          <div className="sm:hidden">
+            <Image src={jackPhone} width={200} />
+          </div>
         </div>
       </section>
     </main>
