@@ -1,7 +1,9 @@
 import Image from "next/image";
+import Link from "next/link";
 import aboutCircle from "../public/aboutCircle.svg";
 import Reveal from "@/components/utils/reveal";
 import { GoSync } from "react-icons/go";
+import { BsGithub, BsLinkedin } from "react-icons/bs";
 
 export default function About() {
   const githubURL = "https://github.com/ghpaterson";
@@ -21,7 +23,16 @@ export default function About() {
           <div className="px-8 mt-4">
             <Image src={aboutCircle} width={200} />
           </div>
-          <div>
+          <div className="flex flex-col items-center justify-center gap-6 text-blu text-5xl font-fungis">
+            <div className="flex items-center gap-6 -mt-4">
+              <Link href={githubURL} target="_blank">
+                <BsGithub />
+              </Link>
+              <Link href={linkedinURL} target="_blank">
+                <BsLinkedin />
+              </Link>
+              <h1 className="mt-4 text-6xl">CV</h1>
+            </div>
             <h1 className="text-blu text-8xl font-fungis mx-40">LONDON, UK</h1>
           </div>
         </section>
@@ -37,7 +48,7 @@ export default function About() {
         <section className="flex justify-between text-blu  font-fungis py-4 px-6"></section>
       </Reveal>
       <Reveal>
-        <section className="flex flex-col gap-4 justify-between items-center text-blu text-8xl font-fungis ">
+        <section className="flex flex-col gap-4 justify-between items-center text-blu text-8xl font-fungis pb-4 ">
           <h3>MUSIC, FOOD, SPORTS &</h3>
           <h3>DESIGN ENTHUSIAST</h3>
           <h2>EX-PARAMEDIC</h2>
