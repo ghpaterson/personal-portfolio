@@ -31,7 +31,9 @@ export default function About() {
               <Link href={linkedinURL} target="_blank">
                 <BsLinkedin />
               </Link>
-              <h1 className="mt-4 text-6xl">CV</h1>
+              <Link href="/CV.pdf" target="_blank">
+                <h1 className="mt-4 text-6xl">CV</h1>
+              </Link>
             </div>
             <h1 className="text-blu text-8xl font-fungis mx-40">LONDON, UK</h1>
           </div>
