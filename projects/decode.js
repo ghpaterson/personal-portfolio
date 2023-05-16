@@ -28,9 +28,7 @@ export default function Decode() {
         </div>
         <div className="flex mt-2">
           <Image src={jackMac1} width={700} />
-          <div className="sm:hidden">
-            <Image src={jackPhone} width={200} />
-          </div>
+          <Image src={jackPhone} width={200} />
         </div>
       </section>
     </main>

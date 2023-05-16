@@ -28,9 +28,7 @@ export default function Headless() {
         </div>
         <div className="flex mt-2">
           <Image src={headlessMac} width={700} />
-          <div className="sm:hidden">
-            <Image src={headlessPhone} width={200} />
-          </div>
+          <Image src={headlessPhone} width={200} />
         </div>
       </section>
     </main>

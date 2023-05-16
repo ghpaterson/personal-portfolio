@@ -28,9 +28,7 @@ export default function Ecoliday() {
         </div>
         <div className="flex mt-2">
           <Image src={ecolidayMac} width={700} alt="ecoliday screen" />
-          <div className="sm:hidden">
-            <Image src={ecolidayPad} width={250} alt="ecoliday pad" />
-          </div>
+          <Image src={ecolidayPad} width={250} alt="ecoliday pad" />
         </div>
       </section>
     </main>

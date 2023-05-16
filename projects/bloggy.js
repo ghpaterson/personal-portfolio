@@ -28,9 +28,7 @@ export default function Bloggy() {
         </div>
         <div className="flex mt-2">
           <Image src={bloggyMac} width={700} />
-          <div className="sm:hidden">
-            <Image src={bloggyPhone} width={200} />
-          </div>
+          <Image src={bloggyPhone} width={200} className="" />
         </div>
       </section>
     </main>
