@@ -7,7 +7,7 @@ export default function Skills() {
     <main className=" w-screen bg-bone">
       <section className="grid grid-col-1 md:grid-cols-2 md:grid-rows-2 pt-32">
         <Reveal>
-          <div className="bg-blu flex flex-col gap-4 md:pl-32 text-white pt-4 px-2 pl-20  text-4xl md:text-7xl font-fungis">
+          <div className="bg-blu flex flex-col gap-4 md:pl-32 text-white pt-4 px-2 pl-20  text-3xl md:text-7xl font-fungis">
             <h2>JAVASCRIPT</h2>
             <h2>TYPESCRIPT</h2>
             <h2>RUBY</h2>
@@ -28,7 +28,7 @@ export default function Skills() {
               <div className="text-blu text-4xl md:text-7xl font-fungis px-20 mr-20">
                 <h2>DREAM JOBS</h2>
                 <h3 className="font-fungis text-2xl md:text-4xl text-blu pt-6">
-                  Climate Change
+                  Climate Positive
                 </h3>
                 <p className="w-96 text-base md:text-lg pt-4 font-poppins">
                   I firmly advocate for universal access to a clean and healthy

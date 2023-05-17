@@ -3,6 +3,8 @@ import Image from "next/image";
 import ecolidayMac from "../public/ecolidayMac.png";
 import ecolidayPad from "../public/ecolidayPad.png";
 import ToLeft from "@/components/toleft";
+import ecoMac from "../public/ecoMac.png";
+import ecoPhone from "../public/ecoPhone.png";
 
 export default function Ecoliday() {
   const ecolidayURL = "https://ecoliday-cxyz.onrender.com/";
@@ -26,9 +28,9 @@ export default function Ecoliday() {
           </Link>
           <h2 className="px-10">01</h2>
         </div>
-        <div className="flex mt-2">
-          <Image src={ecolidayMac} width={700} alt="ecoliday screen" />
-          <Image src={ecolidayPad} width={250} alt="ecoliday pad" />
+        <div className="flex py-6 gap-10">
+          <Image src={ecoMac} width={700} alt="ecoliday screen" />
+          <Image src={ecoPhone} width={200} alt="ecoliday pad" />
         </div>
       </section>
     </main>
