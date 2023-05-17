@@ -1,8 +1,8 @@
 import Link from "next/link";
 import Image from "next/image";
-import jackMac1 from "../public/jackMac1.png";
-import jackPhone from "../public/jackPhone.png";
 import ToLeft from "@/components/toleft";
+import questMac from "../public/questMac.png";
+import missionPhone from "../public/missionPhone.png";
 
 export default function Decode() {
   const spellquestURL = "https://jackquest.vercel.app/";
@@ -26,9 +26,9 @@ export default function Decode() {
           </Link>
           <h2 className="px-10">03</h2>
         </div>
-        <div className="flex mt-2">
-          <Image src={jackMac1} width={700} />
-          <Image src={jackPhone} width={200} />
+        <div className="flex py-6">
+          <Image src={questMac} width={700} />
+          <Image src={missionPhone} width={200} />
         </div>
       </section>
     </main>

@@ -3,6 +3,8 @@ import Image from "next/image";
 import headlessMac from "../public/headlessMac.png";
 import headlessPhone from "../public/headlessPhone.png";
 import ToLeft from "@/components/toleft";
+import headMac from "../public/headMac.png";
+import headPhone from "../public/headPhone.png";
 
 export default function Headless() {
   const headlessURL = "https://headless-iota-five.vercel.app/";
@@ -26,9 +28,9 @@ export default function Headless() {
           </Link>
           <h2 className="px-10">04</h2>
         </div>
-        <div className="flex mt-2">
-          <Image src={headlessMac} width={700} />
-          <Image src={headlessPhone} width={200} />
+        <div className="flex py-6">
+          <Image src={headMac} width={700} />
+          <Image src={headPhone} width={200} />
         </div>
       </section>
     </main>

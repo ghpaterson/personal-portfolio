@@ -1,7 +1,5 @@
 import Link from "next/link";
 import Image from "next/image";
-import ecolidayMac from "../public/ecolidayMac.png";
-import ecolidayPad from "../public/ecolidayPad.png";
 import ToLeft from "@/components/toleft";
 import ecoMac from "../public/ecoMac.png";
 import ecoPhone from "../public/ecoPhone.png";

@@ -1,8 +1,8 @@
 import Link from "next/link";
 import Image from "next/image";
-import bloggyPhone from "../public/bloggyPhone.png";
-import bloggyMac from "../public/bloggyMac.png";
 import ToLeft from "@/components/toleft";
+import blogMac from "../public/blogMac.png";
+import postPhone from "../public/postPhone.png";
 
 export default function Bloggy() {
   const bloggyURL = "https://bloggy-inky.vercel.app/";
@@ -26,9 +26,9 @@ export default function Bloggy() {
           </Link>
           <h2 className="px-10">02</h2>
         </div>
-        <div className="flex mt-2">
-          <Image src={bloggyMac} width={700} />
-          <Image src={bloggyPhone} width={200} className="" />
+        <div className="flex py-6">
+          <Image src={blogMac} width={700} />
+          <Image src={postPhone} width={200} className="" />
         </div>
       </section>
     </main>
