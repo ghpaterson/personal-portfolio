@@ -6,9 +6,11 @@ import { motion as m } from "framer-motion";
 
 export default function Hero({ scrollToElement }) {
   const headlessURL = "https://headless-iota-five.vercel.app/";
+  const githubURL = "https://github.com/ghpaterson";
+  const linkedinURL = "https://www.linkedin.com/in/graeme-paterson-25b096268/";
 
   return (
-    <main className="bg-blu h-full lg:h-screen lg:w-screen min-w-full bg-fixed">
+    <main className="bg-blu h-full lg:w-screen min-w-full bg-fixed">
       <section>
         <div className=" flex flex-col lg:flex-row overflow-hidden ">
           <m.ul
@@ -59,16 +61,16 @@ export default function Hero({ scrollToElement }) {
         animate={{ opacity: 1 }}
         transition={{ duration: 0.75, ease: "easeOut" }}
       >
-        <div className="flex justify-center py-8 lg:ml-32 text-sm lg:text-2xl text-bone font-poppins">
+        <div className="flex justify-center pt-10 pb-32 lg:ml-32 text-sm lg:text-2xl text-bone font-poppins">
           <div className="flex flex-col items-center ">
             <p>GRAEME PATERSON * SOFTWARE DEVELOPER </p>
             <div className="flex justify-center gap-4">
               <p>GHPATERSON @ GMAIL.COM </p>
-              <Link href="#" alt="linkedin">
+              <Link href={linkedinURL} target="_blank" alt="linkedin">
                 {" "}
                 LINKEDIN{" "}
               </Link>
-              <Link href="#" alt="github">
+              <Link href={githubURL} target="_blank" alt="github">
                 {" "}
                 GITHUB
               </Link>
