@@ -1,7 +1,5 @@
 import Link from "next/link";
 import Image from "next/image";
-import headlessMac from "../public/headlessMac.png";
-import headlessPhone from "../public/headlessPhone.png";
 import ToLeft from "@/components/toleft";
 import headMac from "../public/headMac.png";
 import headPhone from "../public/headPhone.png";

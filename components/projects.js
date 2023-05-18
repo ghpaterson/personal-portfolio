@@ -1,5 +1,4 @@
 import ToTop from "@/components/totop";
-import ToLeft from "@/components/toleft";
 import Smiley from "@/components/smiley";
 import Ecoliday from "@/projects/ecoliday";
 import Bloggy from "@/projects/bloggy";
