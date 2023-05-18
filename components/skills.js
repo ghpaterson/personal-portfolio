@@ -47,42 +47,51 @@ export default function Skills() {
         </Reveal>
       </section>
       <section className="w-screen bg-bone py-32">
-        <div className="lg:flex lg:justify-between px-40 text-blu text-3xl font-sudo">
-          <div className="w-72">
-            <h1>Climate Positive</h1>
-            <p className="text-xl py-4">
-              I firmly advocate for universal access to a clean and healthy
-              environment. Climate change poses a significant threat to our
-              ecosystems, biodiversity, and human livelihoods. I would love the
-              opportunity to work for a company that is addressing this global
-              crisis with urgency, innovation, and collaborative efforts.
-            </p>
+        <Reveal>
+          <div className="flex justify-center text-blu text-7xl font-fungis pb-10">
+            <h1>DREAM JOBS</h1>
           </div>
-          <div className="w-72">
-            <h1>Design and the Arts</h1>
-            <p className="text-xl py-4">
-              Art and design have the power to inspire, challenge, and enrich
-              our lives, fostering creativity, cultural understanding, and
-              personal growth. Drawing from my experience and passion for art
-              and design, I am eager to leverage technology and innovative
-              approaches to ensure universal access to the transformative world
-              of creativity.
-            </p>
+        </Reveal>
+        <Reveal>
+          <div className="lg:flex lg:justify-between px-40 text-blu text-3xl font-sudo">
+            <div className="w-72">
+              <h1>Climate Positive</h1>
+              <p className="text-xl py-4">
+                I firmly advocate for universal access to a clean and healthy
+                environment. Climate change poses a significant threat to our
+                ecosystems, biodiversity, and human livelihoods. I would love
+                the opportunity to work for a company that is addressing this
+                global crisis with urgency, innovation, and collaborative
+                efforts.
+              </p>
+            </div>
+            <div className="w-72">
+              <h1>Design and the Arts</h1>
+              <p className="text-xl py-4">
+                Art and design have the power to inspire, challenge, and enrich
+                our lives, fostering creativity, cultural understanding, and
+                personal growth. Drawing from my experience and passion for art
+                and design, I am eager to leverage technology and innovative
+                approaches to ensure universal access to the transformative
+                world of creativity.
+              </p>
+            </div>
+            <div className="w-72">
+              <h1>Healthcare</h1>
+              <p className="text-xl py-4">
+                I am a firm believer in the principle that everyone should have
+                universal access to healthcare, regardless of their
+                socio-economic status or geographical location. Access to
+                quality healthcare is not just a basic human right, but also a
+                fundamental pillar for the well-being and progress of any
+                society. With my extensive experience working in public
+                healthcare systems, I am deeply motivated to harness the power
+                of technology to make universal healthcare a tangible reality
+                for all.
+              </p>
+            </div>
           </div>
-          <div className="w-72">
-            <h1>Healthcare</h1>
-            <p className="text-xl py-4">
-              I am a firm believer in the principle that everyone should have
-              universal access to healthcare, regardless of their socio-economic
-              status or geographical location. Access to quality healthcare is
-              not just a basic human right, but also a fundamental pillar for
-              the well-being and progress of any society. With my extensive
-              experience working in public healthcare systems, I am deeply
-              motivated to harness the power of technology to make universal
-              healthcare a tangible reality for all.
-            </p>
-          </div>
-        </div>
+        </Reveal>
       </section>
       {/* <section className="grid grid-col-1 md:grid-cols-2 md:grid-rows-2 pt-32">
         <Reveal>
