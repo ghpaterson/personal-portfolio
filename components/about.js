@@ -11,7 +11,7 @@ export default function About() {
   return (
     <main className="bg-bone h-full w-screen bg-fixed">
       <Reveal>
-        <section className="md:flex md:justify-between items-end py-10 md:px-10 text-blu text-4xl md:text-8xl font-fungis">
+        <section className="md:flex md:justify-between items-end pt-20 pb-10 md:px-10 text-blu text-4xl md:text-8xl font-fungis">
           <h1>ABOUT</h1>
           <h1 className="">LONDON, UK</h1>
         </section>

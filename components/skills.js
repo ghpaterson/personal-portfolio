@@ -1,11 +1,37 @@
 import Image from "next/image";
 import skillsCircle from "../public/skillsCircle.svg";
 import Reveal from "@/components/utils/reveal";
+import { BsCode, BsCodeSlash } from "react-icons/bs";
+import { MdArrowForwardIos, MdArrowBackIos } from "react-icons/md";
 
 export default function Skills() {
   return (
     <main className=" w-screen bg-bone">
-      <section className="grid grid-col-1 md:grid-cols-2 md:grid-rows-2 pt-32">
+      <section className="flex justify-end lg:px-10 lg:pt-10 text-blu lg:text-7xl font-fungis underline">
+        <h1>SKILLS</h1>
+      </section>
+      <section className="flex flex-col gap-10 items-start lg:px-10 lg:pt-10 text-blu lg:text-7xl font-fungis">
+        <h2>JAVASCRIPT * TYPESCRIPT</h2>
+        <h2>RUBY</h2>
+        <h2>MONGO * EXPRESS * REACT * NODE</h2>
+      </section>
+      <section className="flex flex-col gap-10 items-start lg:py-10 lg:px-10 text-blu text-7xl font-fungis">
+        <h2>TAILWIND CSS</h2>
+        <div>
+          <h2 className="flex">
+            SEMANTIC{" "}
+            <span>
+              <MdArrowBackIos />
+            </span>
+            HTML
+            <span>
+              <MdArrowForwardIos />
+            </span>
+          </h2>
+        </div>
+        <h2>REST API</h2>
+      </section>
+      {/* <section className="grid grid-col-1 md:grid-cols-2 md:grid-rows-2 pt-32">
         <Reveal>
           <div className="bg-blu flex flex-col gap-4 md:pl-32 text-white pt-4 px-2 pl-20  text-3xl md:text-7xl font-fungis">
             <h2>JAVASCRIPT</h2>
@@ -72,7 +98,7 @@ export default function Skills() {
             </p>
           </div>
         </Reveal>
-      </section>
+      </section> */}
     </main>
   );
 }

@@ -15,7 +15,7 @@ export default function Hero({ scrollToElement }) {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 2, delay: 0.25, ease: "easeIn" }}
-            className="flex flex-col font-fungis text-7xl lg:text-9xl text-bone pt-20 md:pt-16 ml-20 lg:ml-36 z-10 "
+            className="flex flex-col font-fungis text-6xl lg:text-9xl text-bone pt-20 md:pt-16 ml-20 lg:ml-36 z-10 "
           >
             <div
               className="hover:cursor-pointer"
@@ -59,12 +59,20 @@ export default function Hero({ scrollToElement }) {
         animate={{ opacity: 1 }}
         transition={{ duration: 0.75, ease: "easeOut" }}
       >
-        <div className="flex justify-center py-8 lg:ml-32 text-base lg:text-3xl text-bone font-poppins">
-          <div>
-            <p>
-              Graeme Paterson <span className="text-orange-800">|</span>{" "}
-              Software Developer{" "}
-            </p>
+        <div className="flex justify-center py-8 lg:ml-32 text-sm lg:text-2xl text-bone font-poppins">
+          <div className="flex flex-col items-center ">
+            <p>GRAEME PATERSON * SOFTWARE DEVELOPER </p>
+            <div className="flex justify-center gap-4">
+              <p>GHPATERSON @ GMAIL.COM </p>
+              <Link href="#" alt="linkedin">
+                {" "}
+                LINKEDIN{" "}
+              </Link>
+              <Link href="#" alt="github">
+                {" "}
+                GITHUB
+              </Link>
+            </div>
           </div>
         </div>
       </m.section>
