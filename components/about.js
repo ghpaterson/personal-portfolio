@@ -3,6 +3,7 @@ import aboutCircle from "../public/aboutCircle.svg";
 import Reveal from "@/components/utils/reveal";
 import { GoSync } from "react-icons/go";
 import flower from "../public/flower.svg";
+import ambulance from "../public/ambulance.svg";
 
 export default function About() {
   return (
@@ -29,7 +30,7 @@ export default function About() {
           </div>
         </Reveal>
         <Reveal>
-          <div className=" text-bone flex items-center justify-between">
+          <div className=" text-bone flex items-center justify-between mb-20">
             <div>
               <h2 className="bg-blu pt-4 px-2">EX-PARAMEDIC</h2>
             </div>
@@ -37,8 +38,8 @@ export default function About() {
         </Reveal>
       </section>
       <Reveal>
-        <section className="lg:-mt-72 lg:ml-40 pb-20">
-          <Image src={flower} width={250} alt="flower" />
+        <section className="lg:-mt-96 lg:ml-40 pb-32">
+          <Image src={ambulance} width={250} alt="flower" />
         </section>
       </Reveal>
     </main>
