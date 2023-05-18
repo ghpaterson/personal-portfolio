@@ -6,16 +6,18 @@ import { motion as m } from "framer-motion";
 
 export default function Hero({ scrollToElement }) {
   const headlessURL = "https://headless-iota-five.vercel.app/";
+  const githubURL = "https://github.com/ghpaterson";
+  const linkedinURL = "https://www.linkedin.com/in/graeme-paterson-25b096268/";
 
   return (
-    <main className="bg-blu h-full lg:h-screen lg:w-screen min-w-full bg-fixed">
+    <main className="bg-blu h-full lg:w-screen min-w-full bg-fixed">
       <section>
         <div className=" flex flex-col lg:flex-row overflow-hidden ">
           <m.ul
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 2, delay: 0.25, ease: "easeIn" }}
-            className="flex flex-col font-fungis text-7xl lg:text-9xl text-bone pt-20 md:pt-16 ml-20 lg:ml-36 z-10 "
+            className="flex flex-col font-fungis text-6xl lg:text-9xl text-bone pt-20 md:pt-16 ml-20 lg:ml-36 z-10 "
           >
             <div
               className="hover:cursor-pointer"
@@ -59,12 +61,20 @@ export default function Hero({ scrollToElement }) {
         animate={{ opacity: 1 }}
         transition={{ duration: 0.75, ease: "easeOut" }}
       >
-        <div className="flex justify-center py-8 lg:ml-32 text-base lg:text-3xl text-bone font-poppins">
-          <div>
-            <p>
-              Graeme Paterson <span className="text-orange-800">|</span>{" "}
-              Software Developer{" "}
-            </p>
+        <div className="flex justify-center pt-10 pb-32 lg:ml-32 text-sm lg:text-2xl text-bone font-poppins">
+          <div className="flex flex-col items-center ">
+            <p>GRAEME PATERSON * SOFTWARE DEVELOPER </p>
+            <div className="flex justify-center gap-4">
+              <p>GHPATERSON @ GMAIL.COM </p>
+              <Link href={linkedinURL} target="_blank" alt="linkedin">
+                {" "}
+                LINKEDIN{" "}
+              </Link>
+              <Link href={githubURL} target="_blank" alt="github">
+                {" "}
+                GITHUB
+              </Link>
+            </div>
           </div>
         </div>
       </m.section>

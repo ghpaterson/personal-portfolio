@@ -10,6 +10,7 @@ module.exports = {
       fontFamily: {
         fungis: ["fungis", "sans-serif"],
         poppins: ["Poppins", "sans-serif"],
+        sudo: ["sudo", "sans-serif"],
       },
       colors: {
         blu: "#2180D8",
