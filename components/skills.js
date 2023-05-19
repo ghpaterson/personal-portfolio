@@ -10,12 +10,12 @@ export default function Skills() {
   return (
     <main className=" w-screen bg-blu">
       <Reveal>
-        <section className="flex justify-end lg:px-10 lg:pt-20 ">
+        <section className="flex justify-center lg:justify-end pt-20  lg:px-10 lg:pt-20 ">
           <Image src={skillsRound} width={200} alt="skills-roundel" />
         </section>
       </Reveal>
 
-      <section className="flex flex-col gap-10 items-start lg:px-10 lg:-my-14 text-bone lg:text-7xl font-fungis">
+      <section className="flex flex-col gap-10 items-center lg:items-start lg:px-10 lg:-my-14 text-bone text-xl py-6 lg:text-7xl font-fungis">
         <Reveal>
           <h2>JAVASCRIPT * TYPESCRIPT</h2>
         </Reveal>
@@ -23,10 +23,12 @@ export default function Skills() {
           <h2>RUBY</h2>
         </Reveal>
         <Reveal>
-          <h2>MONGO * EXPRESS * REACT * NODE</h2>
+          <h2 className="text-xl lg:text-7xl">
+            MONGO * EXPRESS * REACT * NODE
+          </h2>
         </Reveal>
       </section>
-      <section className="flex flex-col gap-10 items-start lg:py-24 lg:px-10 text-bone text-7xl font-fungis">
+      <section className="flex flex-col gap-10 items-center lg:items-start lg:py-24 lg:px-10 text-bone text-xl lg:text-7xl font-fungis">
         <Reveal>
           <h2>TAILWIND CSS</h2>
         </Reveal>
@@ -49,20 +51,20 @@ export default function Skills() {
         </Reveal>
       </section>
       <Reveal>
-        <section className="flex justify-end lg:-mt-72 lg:mr-40 pb-32">
+        <section className="flex justify-center lg:justify-end pt-10 lg:-mt-72 lg:mr-40 pb-32">
           <Image src={laptop} width={250} alt="laptop" />
         </section>
       </Reveal>
       <section className="w-screen bg-bone py-32">
         <Reveal>
-          <div className="flex justify-center text-blu text-7xl font-fungis pb-10">
+          <div className="flex justify-center text-blu text-4xl lg:text-7xl font-fungis pb-10">
             <h1>DREAM JOBS</h1>
           </div>
         </Reveal>
 
         <Reveal>
-          <div className="lg:flex lg:justify-between px-40 text-blu text-3xl font-sudo">
-            <div className="w-72">
+          <div className="flex flex-col items-center gap-6 lg:flex-row lg:justify-between lg:items-start px-40 text-blu text-3xl font-sudo">
+            <div className="flex flex-col items-center lg:items-start w-72">
               <h1>Climate Positive</h1>
               <p className="text-xl py-4">
                 I firmly advocate for universal access to a clean and healthy
@@ -73,7 +75,7 @@ export default function Skills() {
                 efforts.
               </p>
             </div>
-            <div className="w-72">
+            <div className="flex flex-col items-center lg:items-start w-72">
               <h1>Design and the Arts</h1>
               <p className="text-xl py-4">
                 Art and design have the power to inspire, challenge, and enrich
@@ -84,7 +86,7 @@ export default function Skills() {
                 world of creativity.
               </p>
             </div>
-            <div className="w-72">
+            <div className="flex flex-col items-center lg:items-start w-72">
               <h1>Healthcare</h1>
               <p className="text-xl py-4">
                 I am a firm believer in the principle that everyone should have
@@ -101,7 +103,7 @@ export default function Skills() {
           </div>
         </Reveal>
         <Reveal>
-          <section className="lg:-mt-40 lg:ml-72">
+          <section className="flex justify-center pt-10 lg:-mt-40 lg:-ml-72">
             <Image src={flower} width={250} alt="flower" />
           </section>
         </Reveal>

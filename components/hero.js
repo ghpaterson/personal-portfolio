@@ -17,7 +17,7 @@ export default function Hero({ scrollToElement }) {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 2, delay: 0.25, ease: "easeIn" }}
-            className="flex flex-col font-fungis text-6xl lg:text-9xl text-bone pt-20 md:pt-16 ml-20 lg:ml-36 z-10 "
+            className="flex flex-col font-fungis text-5xl lg:text-9xl text-bone pt-20 md:pt-16 ml-20 lg:ml-36 z-10 "
           >
             <div
               className="hover:cursor-pointer"
