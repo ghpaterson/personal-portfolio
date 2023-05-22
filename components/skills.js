@@ -1,7 +1,6 @@
 import Image from "next/image";
 import skillsRound from "../public/skills-round.svg";
 import Reveal from "@/components/utils/reveal";
-import { BsCode, BsCodeSlash } from "react-icons/bs";
 import { MdArrowForwardIos, MdArrowBackIos } from "react-icons/md";
 import laptop from "../public/laptop.svg";
 import flower from "../public/flower.svg";
@@ -15,7 +14,7 @@ export default function Skills() {
         </section>
       </Reveal>
 
-      <section className="flex flex-col gap-10 items-center lg:items-start lg:px-10 lg:-my-14 text-bone text-xl py-20 lg:text-7xl font-fungis">
+      <section className="flex flex-col gap-10 items-center lg:items-start lg:px-10 lg:-my-14 text-bone text-xl pt-20 lg:text-7xl font-fungis">
         <Reveal>
           <h2>JAVASCRIPT * TYPESCRIPT</h2>
         </Reveal>
