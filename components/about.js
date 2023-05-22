@@ -9,7 +9,7 @@ export default function About() {
   return (
     <main className="bg-bone h-full w-screen bg-fixed">
       <Reveal>
-        <section className="flex flex-col items-center gap-8 md:flex-row md:justify-between md:items-end pt-14 pb-10 md:px-10 text-blu text-3xl md:text-7xl font-fungis">
+        <section className="flex flex-col items-center gap-20 md:flex-row md:justify-between md:items-end pt-14 pb-10 md:px-10 text-blu text-3xl md:text-7xl font-fungis">
           <Image src={aboutCircle} width={200} alt="about-roundel" />
           <h1 className="">LONDON, UK</h1>
         </section>
@@ -22,7 +22,7 @@ export default function About() {
         </section>
       </Reveal>
 
-      <section className="flex flex-col gap-4 items-center md:justify-between md:items-end text-blu text-3xl md:text-7xl font-fungis md:pb-32 md:px-10 ">
+      <section className="flex flex-col gap-10 items-center md:justify-between md:items-end text-blu text-3xl md:text-7xl font-fungis md:pb-32 md:px-10 ">
         <Reveal>
           <div className="flex flex-col items-center md:items-end gap-10">
             <h3>MUSIC, FOOD, SPORTS &</h3>

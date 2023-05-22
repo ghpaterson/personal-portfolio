@@ -15,7 +15,7 @@ export default function Skills() {
         </section>
       </Reveal>
 
-      <section className="flex flex-col gap-10 items-center lg:items-start lg:px-10 lg:-my-14 text-bone text-xl py-6 lg:text-7xl font-fungis">
+      <section className="flex flex-col gap-10 items-center lg:items-start lg:px-10 lg:-my-14 text-bone text-xl py-20 lg:text-7xl font-fungis">
         <Reveal>
           <h2>JAVASCRIPT * TYPESCRIPT</h2>
         </Reveal>

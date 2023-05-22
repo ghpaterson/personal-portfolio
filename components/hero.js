@@ -10,14 +10,14 @@ export default function Hero({ scrollToElement }) {
   const linkedinURL = "https://www.linkedin.com/in/graeme-paterson-25b096268/";
 
   return (
-    <main className="bg-blu h-full lg:w-screen min-w-full bg-fixed">
+    <main className="bg-blu h-screen lg:h-full lg:w-screen min-w-full bg-fixed">
       <section>
         <div className=" flex flex-col lg:flex-row overflow-hidden ">
           <m.ul
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 2, delay: 0.25, ease: "easeIn" }}
-            className="flex flex-col font-fungis text-5xl lg:text-9xl text-bone pt-20 md:pt-16 ml-20 lg:ml-36 z-10 "
+            className="flex flex-col font-fungis text-5xl lg:text-9xl text-bone pt-32 md:pt-16 ml-20 lg:ml-36 z-10 "
           >
             <div
               className="hover:cursor-pointer"
@@ -50,7 +50,7 @@ export default function Hero({ scrollToElement }) {
             initial={{ x: "100%", opacity: 0 }}
             animate={{ x: "0%", opacity: 1 }}
             transition={{ duration: 0.75, ease: "easeOut" }}
-            className="z-0 -mt-72 ml-6 lg:mt-10 lg:-ml-10 px-10 lg:px-0 overflow-hidden"
+            className="z-0 -mt-44 ml-6 lg:mt-10 lg:-ml-10 px-10 lg:px-0 overflow-hidden"
           >
             <Image src={portrait} width={450} />
           </m.div>
