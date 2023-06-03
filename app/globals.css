@@ -14,6 +14,11 @@
   src: url("/fonts/Sudo-Regular.ttf") format("truetype");
 }
 
+@font-face {
+  font-family: "mirage";
+  src: url("/fonts/Solide_Mirage-Mono_web.ttf") format("truetype");
+}
+
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -29,5 +34,5 @@
 }
 
 body {
-  background-color: #2180D8;
+  background-color: black;
 }
