@@ -1,8 +1,12 @@
 import Image from "next/image";
 import Reveal from "@/components/utils/reveal";
 import portrait from "../public/portrait-cropped.png";
+import Link from "next/link";
 
 export default function About() {
+  const linkedinURL = "https://www.linkedin.com/in/graeme-paterson-25b096268/";
+  const githubURL = "https://github.com/ghpaterson";
+
   return (
     <main className="bg-sand h-full w-screen bg-fixed">
       {/* about section */}
@@ -67,7 +71,7 @@ export default function About() {
         </Reveal>
       </section>
       {/* skills section */}
-      <section className="flex flex-col lg:mx-32">
+      <section className="flex flex-col lg:mx-32 lg:pb-20">
         <div className=" flex flex-col font-mirage text-8xl text-black lg:px-20 gap-10">
           <Reveal>
             <h1>Skills</h1>
@@ -109,6 +113,29 @@ export default function About() {
           </Reveal>
         </div>
       </section>
+      {/* cv section */}
+      <Reveal>
+        <section className="lg:mx-32 lg:pb-32">
+          <div className="lg:flex lg:px-20 gap-6 font-mirage text-2xl">
+            <button
+              href="#"
+              className="bg-black px-4 py-2 text-sand rounded-full"
+            >
+              CV
+            </button>
+            <Link href={linkedinURL} target="_blank">
+              <button className="bg-black px-4 py-2 text-sand rounded-full">
+                Linkedin
+              </button>
+            </Link>
+            <Link href={githubURL} target="_blank">
+              <button className="bg-black px-4 py-2 text-sand rounded-full">
+                Github
+              </button>
+            </Link>
+          </div>
+        </section>
+      </Reveal>
     </main>
   );
 }
