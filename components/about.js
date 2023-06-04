@@ -10,22 +10,22 @@ export default function About() {
   return (
     <main className="bg-sand h-full w-screen bg-fixed">
       {/* about section */}
-      <section className="lg:flex lg:justify-between lg:py-20 lg:px-32">
-        <div className=" lg:flex lg:flex-col lg:my-20 lg:mx-20 gap-20">
+      <section className="lg:flex lg:justify-between lg:pt-20 lg:px-32 px-10 pt-10">
+        <div className=" flex flex-col items-center lg:items-start my-20 lg:my-20  lg:mx-20 gap-20">
           <Reveal>
-            <div className="text-8xl text-black font-mirage">
+            <div className="text-5xl lg:text-8xl text-black font-mirage">
               <h1>About</h1>
             </div>
           </Reveal>
           <Reveal>
-            <div className="w-[550px] text-2xl text-black font-mirage">
+            <div className="w-[250] lg:w-[550px] text-xl lg:text-2xl text-black font-mirage">
               <p>
                 I'm Graeme. A Software Developer, Maker, design enthusiast and
                 problem solver
               </p>
             </div>
           </Reveal>
-          <div className=" lg:flex lg:flex-col w-[500px] text-lg text-black gap-10">
+          <div className="flex flex-col w-[250] lg:w-[500px] text-base lg:text-lg text-black gap-10">
             <Reveal>
               <p>
                 After spending over a decade working as a Paramedic in public
@@ -45,9 +45,9 @@ export default function About() {
             </Reveal>
           </div>
           <Reveal>
-            <div className=" lg:flex lg:flex-col w-[500px] text-lg text-black gap-10">
+            <div className="flex flex-col w-[250] lg:w-[500px] text-base lg:text-lg text-black gap-10">
               <p>One of my favourite quotes by Charles Eames:</p>
-              <div className="font-mirage text-2xl text-black">
+              <div className="font-mirage text-xl lg:text-2xl text-black">
                 <p>
                   "Design is about creating somthing that is both beautiful and
                   functional"
@@ -71,13 +71,13 @@ export default function About() {
         </Reveal>
       </section>
       {/* skills section */}
-      <section className="flex flex-col lg:mx-32 lg:pb-20">
-        <div className=" flex flex-col font-mirage text-8xl text-black lg:px-20 gap-10">
+      <section className="flex flex-col pt-10 lg:mx-32 lg:pb-20 pb-10">
+        <div className=" flex flex-col items-center lg:items-start font-mirage text-5xl lg:text-8xl text-black lg:px-20 gap-10 mx-4 lg:mx-0">
           <Reveal>
             <h1>Skills</h1>
           </Reveal>
           <Reveal>
-            <div className="flex flex-col gap-4 text-4xl">
+            <div className="flex flex-col items-center lg:items-start gap-4 text-2xl lg:text-4xl">
               <h2>Frontend</h2>
               <div className="text-lg font-serif">
                 <p>
@@ -88,7 +88,7 @@ export default function About() {
             </div>
           </Reveal>
           <Reveal>
-            <div className="flex flex-col gap-4 text-4xl">
+            <div className="flex flex-col items-center lg:items-start gap-4 text-2xl lg:text-4xl">
               <h2>Backend</h2>
               <div className="text-lg font-serif">
                 <p>Ruby / Express / Node / MongoDB / Postgres</p>
@@ -96,7 +96,7 @@ export default function About() {
             </div>
           </Reveal>
           <Reveal>
-            <div className="flex flex-col gap-4 text-4xl">
+            <div className="flex flex-col items-center lg:items-start gap-4 text-2xl lg:text-4xl">
               <h2>API Development</h2>
               <div className="text-lg font-serif">
                 <p>REST API / GraphQl</p>
@@ -104,7 +104,7 @@ export default function About() {
             </div>
           </Reveal>
           <Reveal>
-            <div className="flex flex-col gap-4 text-4xl">
+            <div className="flex flex-col items-center lg:items-start gap-4 text-2xl lg:text-4xl">
               <h2>Testing</h2>
               <div className="text-lg font-serif">
                 <p>Jest / Cypress / RSpec</p>
@@ -115,8 +115,8 @@ export default function About() {
       </section>
       {/* cv section */}
       <Reveal>
-        <section className="lg:mx-32 lg:pb-32">
-          <div className="lg:flex lg:px-20 gap-6 font-mirage text-2xl">
+        <section className="lg:mx-32 lg:pb-32 pb-20">
+          <div className="lg:flex-row flex flex-col items-center px-10 lg:px-20 gap-6 font-mirage text-2xl">
             <button
               href="#"
               className="bg-black px-4 py-2 text-sand rounded-full"

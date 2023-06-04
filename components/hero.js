@@ -8,16 +8,16 @@ export default function Hero({ scrollToElement }) {
   const headlessURL = "https://headless-iota-five.vercel.app/";
 
   return (
-    <main className="bg-black h-screen lg:h-sreen lg:w-screen min-w-full bg-fixed">
+    <main className="bg-black h-full lg:h-sreen lg:w-screen min-w-full bg-fixed">
       <m.section
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1, delay: 0.25, ease: "easeIn" }}
       >
         <div className=" flex flex-col lg:flex-row justify-between lg:mx-24 lg:my-8">
-          <div className="flex flex-col gap-40">
+          <div className="flex flex-col items-center gap-10 lg:gap-40">
             <Image src={lotus} width={400} alt="lotus" />
-            <div className="text-sand text-3xl font-mirage">
+            <div className="flex flex-col items-center lg:items-start text-sand text-xl lg:text-3xl font-mirage">
               <h1>Graeme Paterson</h1>
               <div className="text-xl font-serif pt-6">
                 <p>Creative Software Developer</p>
@@ -25,7 +25,7 @@ export default function Hero({ scrollToElement }) {
               </div>
             </div>
           </div>
-          <ul className="h-screen flex flex-col items-end justify-center font-mirage text-5xl lg:text-9xl  text-sand">
+          <ul className="lg:h-screen flex flex-col items-center gap-2 lg:items-end lg:justify-center font-mirage text-5xl lg:text-9xl py-10 lg:py-0  text-sand">
             <div
               className="hover:cursor-pointer"
               onClick={() => scrollToElement("about")}
