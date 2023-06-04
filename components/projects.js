@@ -48,13 +48,13 @@ export default function Projects({ scrollToElement }) {
     <main className="snap-x snap-mandatory h-screen w-screen flex overflow-y-hidden">
       <section
         id="project-home"
-        className="snap-start bg-blu flex-shrink-0 min-h-screen min-w-full lg:w-screen bg-fixed"
+        className="snap-start bg-black flex-shrink-0 min-h-screen min-w-full lg:w-screen bg-fixed"
       >
         <ToTop scrollToElement={scrollToElement} />
 
-        <div className="flex ml-14 lg:ml-0 lg:py-0 lg:gap-32 lg:-mt-16">
+        <div className="flex lg:ml-0 lg:py-0 lg:gap-32">
           <div className="flex justify-center">
-            <ul className="flex flex-col items-center font-fungis text-4xl lg:text-9xl lg:-mt-40 lg:ml-72 text-bone gap-2">
+            <ul className="flex flex-col items-end font-mirage text-4xl lg:text-8xl  text-sand gap-2">
               {posts.map((post) => (
                 <div key={post.id}>
                   <div
