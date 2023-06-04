@@ -6,10 +6,10 @@ export default function ToLeft({ scrollToElement }) {
   };
   return (
     <main>
-      <div className="flex items-center text-bone text-4xl lg:text-5xl py-2 lg:py-8">
+      <div className="flex items-center text-sand text-4xl lg:text-3xl py-2 lg:py-8">
         <FiChevronLeft />
         <div
-          className="hover:cursor-pointer mt-1 font-fungis"
+          className="hover:cursor-pointer mt-1 font-mirage"
           onClick={scrollToProjectHome}
         >
           back

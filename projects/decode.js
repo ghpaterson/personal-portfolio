@@ -20,7 +20,7 @@ export default function Decode() {
         <div className="p-4">
           <ToLeft scrollToElement={scrollToElement} />
         </div>
-        <div className="flex justify-between text-3xl lg:text-6xl  text-bone font-fungis">
+        <div className="flex justify-between text-3xl lg:text-5xl  text-sand font-mirage">
           <Link href={spellquestURL} target="_blank">
             <h2 className=" ">JACK'S SPELLQUEST</h2>
           </Link>
