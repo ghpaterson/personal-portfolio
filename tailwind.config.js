@@ -17,6 +17,7 @@ module.exports = {
         blu: "#2180D8",
         bone: "#FFFFFC",
         sand: "#F1DDB6",
+        blak: "#111817",
       },
     },
   },

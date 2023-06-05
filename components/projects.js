@@ -48,7 +48,7 @@ export default function Projects({ scrollToElement }) {
     <main className="snap-x snap-mandatory h-screen w-screen flex overflow-y-hidden">
       <section
         id="project-home"
-        className="snap-start bg-black flex-shrink-0 min-h-screen min-w-full lg:w-screen bg-fixed"
+        className="snap-start bg-blak flex-shrink-0 min-h-screen min-w-full lg:w-screen bg-fixed"
       >
         <ToTop scrollToElement={scrollToElement} />
 
@@ -56,8 +56,9 @@ export default function Projects({ scrollToElement }) {
           <div className="flex flex-col gap-6 font-mirage text-sand text-5xl">
             <h1>Projects</h1>
             <p className="font-serif text-xl">
-              Some of the work that I'm most proud of. Constantly trying to
-              improve my code and design
+              I'm thrilled to share some of the work that brings me immense
+              pride and joy! It's a never-ending adventure of constantly
+              tinkering, refining, and enhancing my code and design skills.
             </p>
           </div>
           <div className="flex justify-end items-end">
@@ -105,7 +106,7 @@ export default function Projects({ scrollToElement }) {
           </Reveal>
           <div className="flex items-center lg:px-6 lg:mt-8 mt-6">
             <Details
-              desc="Do my friends and I like nice things? Yes. Do we like to share nice things with each? Sometimes. Mister Bloggy is a social media web app that lets us be pretencious about anything in the world of music, food and design. It's not really a secret "
+              desc="Do my friends and I like nice things? Yes. Do we like to share nice things with each other? Sometimes. Mister Bloggy is a social media web app that lets us be pretencious about anything in the world of music, food and design. It's not really a secret "
               stack="JS | REACT | NEXT | FIREBASE | TAILWIND"
             />
           </div>

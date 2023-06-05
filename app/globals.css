@@ -34,5 +34,6 @@
 }
 
 body {
-  background-color: black;
+  background-color: #111817;
+  cursor: url("../public/handCursor.svg");
 }

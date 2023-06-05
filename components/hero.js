@@ -8,13 +8,13 @@ export default function Hero({ scrollToElement }) {
   const headlessURL = "https://headless-iota-five.vercel.app/";
 
   return (
-    <main className="bg-black h-full lg:h-screen lg:w-screen min-w-full bg-fixed">
+    <main className="bg-blak h-full lg:h-screen lg:w-screen min-w-full bg-fixed">
       <m.section
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1, delay: 0.4, ease: "easeIn" }}
       >
-        <div className=" flex flex-col lg:flex-row justify-between lg:mx-24 lg:my-8">
+        <div className=" flex flex-col lg:flex-row justify-between lg:mx-24 lg:py-8">
           <div className="flex flex-col items-center gap-10 lg:gap-40">
             <Image src={lotus} width={400} alt="lotus" />
             <m.div
