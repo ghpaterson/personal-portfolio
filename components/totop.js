@@ -6,7 +6,7 @@ export default function ToTop({ scrollToElement }) {
     <nav>
       <div className="font-mirage text-4xl lg:text-5xl text-sand flex items-center gap-6 lg:flex-row lg:justify-end px-16 py-12 ">
         <div
-          className=" hover:cursor-pointer"
+          className=" hover:cursor-pointer hover:italic"
           onClick={() => scrollToElement("hero")}
         >
           ^up

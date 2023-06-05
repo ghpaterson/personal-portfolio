@@ -3,7 +3,7 @@ import Smiley from "@/components/smiley";
 import Ecoliday from "@/projects/ecoliday";
 import Bloggy from "@/projects/bloggy";
 import Decode from "@/projects/decode";
-import Headless from "@/projects/headless";
+import Mzansi from "@/projects/headless";
 import Details from "@/components/details";
 import Reveal from "@/components/utils/reveal";
 const posts = [
@@ -31,8 +31,8 @@ const posts = [
   {
     id: 4,
     number: "04",
-    title: "HEADLESS",
-    slug: "headless",
+    title: "MZANSI",
+    slug: "mzansi",
     ml: "32",
   },
 ];
@@ -65,7 +65,7 @@ export default function Projects({ scrollToElement }) {
               {posts.map((post) => (
                 <div key={post.id}>
                   <div
-                    className="hover:underline hover:cursor-pointer"
+                    className="hover:rotate-3 hover:italic hover:cursor-pointer"
                     onClick={() => scrollToProject(post.slug)}
                   >
                     <Reveal>
@@ -125,14 +125,14 @@ export default function Projects({ scrollToElement }) {
         </div>
       </section>
       <section className="snap-start flex-shrink-0 min-h-screen w-screen">
-        <div id="headless" className="lg:flex px-10">
+        <div id="mzansi" className="lg:flex px-10">
           <Reveal>
-            <Headless />
+            <Mzansi />
           </Reveal>
           <div className="flex items-center lg:px-6 lg:mt-20 mt-6">
             <Details
-              desc="Gosh! The world of Tech is exhausting. I'm trying to cram as much as I can inside my aging brain. This is my personal blog where I share all the things I'm learning to no-one in particular. Probably not a high traffic site. I'm trying to keep active on there but this portfolio has taken longer than expected"
-              stack="JS | REACT | NEXT | HYGRAPH CMS | GRAPHQL | TAILWIND"
+              desc="Imagine having free access to millions of pieces of art, culture and history! Thanks to the wonderful folk at the V&A I have been able to highlight the work of some amazing artists from my country of birth. Work in progress and ever growing "
+              stack="JS | REACT | NEXT | AXIOS | REST API | TAILWIND"
             />
           </div>
         </div>
