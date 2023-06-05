@@ -4,12 +4,9 @@ import projectsCircle from "../public/projectsCircle.svg";
 export default function ToTop({ scrollToElement }) {
   return (
     <nav>
-      <div className="font-fungis text-4xl lg:text-5xl text-bone flex flex-col items-center gap-6 lg:flex-row lg:justify-between px-16 py-12 ">
-        <div>
-          <Image src={projectsCircle} width={200} />
-        </div>
+      <div className="font-mirage text-4xl lg:text-5xl text-sand flex items-center gap-6 lg:flex-row lg:justify-end px-16 py-12 ">
         <div
-          className=" hover:cursor-pointer"
+          className=" hover:cursor-pointer hover:italic"
           onClick={() => scrollToElement("hero")}
         >
           ^up

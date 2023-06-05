@@ -11,10 +11,13 @@ module.exports = {
         fungis: ["fungis", "sans-serif"],
         poppins: ["Poppins", "sans-serif"],
         sudo: ["sudo", "sans-serif"],
+        mirage: ["mirage", "san-serif"],
       },
       colors: {
         blu: "#2180D8",
         bone: "#FFFFFC",
+        sand: "#F1DDB6",
+        blak: "#111817",
       },
     },
   },

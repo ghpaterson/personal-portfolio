@@ -20,7 +20,7 @@ export default function Ecoliday() {
         <div className="p-4">
           <ToLeft scrollToElement={scrollToElement} />
         </div>
-        <div className="flex justify-between gap-2 text-3xl lg:text-6xl text-bone font-fungis">
+        <div className="flex justify-between gap-2 text-3xl lg:text-5xl text-sand font-mirage">
           <Link href={ecolidayURL} target="_blank">
             <h2 className="">ECOLIDAY</h2>
           </Link>

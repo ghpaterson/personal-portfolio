@@ -3,7 +3,7 @@ import Smiley from "@/components/smiley";
 import Ecoliday from "@/projects/ecoliday";
 import Bloggy from "@/projects/bloggy";
 import Decode from "@/projects/decode";
-import Headless from "@/projects/headless";
+import Mzansi from "@/projects/headless";
 import Details from "@/components/details";
 import Reveal from "@/components/utils/reveal";
 const posts = [
@@ -31,8 +31,8 @@ const posts = [
   {
     id: 4,
     number: "04",
-    title: "HEADLESS",
-    slug: "headless",
+    title: "MZANSI",
+    slug: "mzansi",
     ml: "32",
   },
 ];
@@ -48,17 +48,25 @@ export default function Projects({ scrollToElement }) {
     <main className="snap-x snap-mandatory h-screen w-screen flex overflow-y-hidden">
       <section
         id="project-home"
-        className="snap-start bg-blu flex-shrink-0 min-h-screen min-w-full lg:w-screen bg-fixed"
+        className="snap-start bg-blak flex-shrink-0 min-h-screen min-w-full lg:w-screen bg-fixed"
       >
         <ToTop scrollToElement={scrollToElement} />
 
-        <div className="flex ml-14 lg:ml-0 lg:py-0 lg:gap-32 lg:-mt-16">
-          <div className="flex justify-center">
-            <ul className="flex flex-col items-center font-fungis text-4xl lg:text-9xl lg:-mt-40 lg:ml-72 text-bone gap-2">
+        <div className="flex justify-between lg:px-20">
+          <div className="flex flex-col gap-6 font-mirage text-sand text-5xl">
+            <h1>Projects</h1>
+            <p className="font-serif text-xl">
+              I'm thrilled to share some of the work that brings me immense
+              pride and joy! It's a never-ending adventure of constantly
+              tinkering, refining, and enhancing my code and design skills.
+            </p>
+          </div>
+          <div className="flex justify-end items-end">
+            <ul className="flex flex-col items-end font-mirage text-4xl lg:text-8xl  text-sand gap-2">
               {posts.map((post) => (
                 <div key={post.id}>
                   <div
-                    className={`hover:underline hover:cursor-pointer lg:ml-${post.ml}`}
+                    className="hover:rotate-3 hover:italic hover:cursor-pointer"
                     onClick={() => scrollToProject(post.slug)}
                   >
                     <Reveal>
@@ -83,7 +91,7 @@ export default function Projects({ scrollToElement }) {
           <Reveal>
             <Ecoliday />
           </Reveal>
-          <div className="flex items-center lg:px-0 lg:-mt-8 mt-6">
+          <div className="flex items-center lg:px-0 lg:-mt-0 mt-6">
             <Details
               desc="Do you feel guilty about your Carbon Emission? You should. Peep what your personal emission are for your 'work trip' to Amsterdam. Maybe take the train - It's a lot better for the Mother Earth. Trust me, I spent a lot of time on this site"
               stack="JS | REACT | EXPRESS | NODE | MONGODB | TAILWIND"
@@ -96,9 +104,9 @@ export default function Projects({ scrollToElement }) {
           <Reveal>
             <Bloggy />
           </Reveal>
-          <div className="flex items-center lg:px-6 lg:mt-0 mt-6">
+          <div className="flex items-center lg:px-6 lg:mt-8 mt-6">
             <Details
-              desc="Do my friends and I like nice things? Yes. Do we like to share nice things with each? Sometimes. Mister Bloggy is a social media web app that lets us be pretencious about anything in the world of music, food and design. It's not really a secret "
+              desc="Do my friends and I like nice things? Yes. Do we like to share nice things with each other? Sometimes. Mister Bloggy is a social media web app that lets us be pretencious about anything in the world of music, food and design. It's not really a secret "
               stack="JS | REACT | NEXT | FIREBASE | TAILWIND"
             />
           </div>
@@ -109,7 +117,7 @@ export default function Projects({ scrollToElement }) {
           <Reveal>
             <Decode />
           </Reveal>
-          <div className=" flex items-center lg:px-6 lg:mt-0 mt-6">
+          <div className=" flex items-center lg:px-6 lg:mt-8 mt-6">
             <Details
               desc="Jack's SpellQuest has been built and designed in collaboration with the Child Development Network to assist my nephew Jack on his journey to stay in school (he's five). A sister site called Decode Care exists but I wanted to shout-out Jack! Currently being trialed by the kids with constant feedback"
               stack="JS | REACT | NEXT | TAILWIND"
@@ -118,14 +126,14 @@ export default function Projects({ scrollToElement }) {
         </div>
       </section>
       <section className="snap-start flex-shrink-0 min-h-screen w-screen">
-        <div id="headless" className="lg:flex px-10">
+        <div id="mzansi" className="lg:flex px-10">
           <Reveal>
-            <Headless />
+            <Mzansi />
           </Reveal>
-          <div className="flex items-center lg:px-6 lg:mt-12 mt-6">
+          <div className="flex items-center lg:px-6 lg:mt-20 mt-6">
             <Details
-              desc="Gosh! The world of Tech is exhausting. I'm trying to cram as much as I can inside my aging brain. This is my personal blog where I share all the things I'm learning to no-one in particular. Probably not a high traffic site. I'm trying to keep active on there but this portfolio has taken longer than expected"
-              stack="JS | REACT | NEXT | HYGRAPH CMS | GRAPHQL | TAILWIND"
+              desc="Imagine having free access to millions of pieces of art, culture and history! Thanks to the wonderful folk at the V&A I have been able to highlight the work of some amazing artists from my country of birth. Work in progress and ever growing "
+              stack="JS | REACT | NEXT | AXIOS | REST API | TAILWIND"
             />
           </div>
         </div>
