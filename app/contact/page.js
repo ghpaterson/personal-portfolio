@@ -4,6 +4,8 @@ import { useFormik } from "formik";
 import * as Yup from "yup";
 
 export default function Contact() {
+  //Router
+
   // formik logic
 
   const formik = useFormik({
@@ -14,7 +16,6 @@ export default function Contact() {
     },
 
     //Validate form
-    //currently have two form validations
 
     validationSchema: Yup.object({
       name: Yup.string()
@@ -29,8 +30,9 @@ export default function Contact() {
     }),
 
     //submit form
-    onSubmit: (values) => {
+    onSubmit: (values, { resetForm }) => {
       console.log(values);
+      resetForm();
     },
   });
 
