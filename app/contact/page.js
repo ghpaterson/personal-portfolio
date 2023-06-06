@@ -1,6 +1,20 @@
-import Link from "next/link";
+"use client";
+
+import { useFormik } from "formik";
 
 export default function Contact() {
+  // formik logic
+
+  const formik = useFormik({
+    initialValues: {
+      name: "",
+      email: "",
+      message: "",
+    },
+  });
+
+  console.log(formik.values);
+
   return (
     <main className="lg:w-full lg:h-screen flex ">
       <section className="w-1/2 h-screen bg-sand">
@@ -21,13 +35,15 @@ export default function Contact() {
                 Name
               </label>
               <input
-                className="p-2 w-full  focus:border-sand"
+                className="p-2 w-full  focus:border-sand rounded-xl text-blak"
                 required
                 minLength={3}
                 maxLength={30}
                 type="text"
                 name="name"
-                placeholder="Enter Name"
+                placeholder="Enter Your Name"
+                value={formik.values.name}
+                onChange={formik.handleChange}
               />
             </div>
             {/* email input field */}
@@ -36,13 +52,15 @@ export default function Contact() {
                 Email
               </label>
               <input
-                className="p-2 w-full focus:border-sand"
+                className="p-2 w-full rounded-xl text-blak"
                 required
                 minLength={6}
                 maxLength={50}
                 type="email"
                 name="email"
-                placeholder="Enter Email"
+                placeholder="Enter Your Email"
+                value={formik.values.email}
+                onChange={formik.handleChange}
               />
             </div>
             {/* message input field */}
@@ -57,7 +75,9 @@ export default function Contact() {
                 rows={4}
                 name="message"
                 placeholder="What can I help you with?"
-                className="p-2 w-full"
+                className="p-2 w-full rounded-xl text-blak"
+                value={formik.values.message}
+                onChange={formik.handleChange}
               />
             </div>
             {/* submit button */}
