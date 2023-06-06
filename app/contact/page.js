@@ -1,6 +1,7 @@
 "use client";
 
 import { useFormik } from "formik";
+import * as Yup from "yup";
 
 export default function Contact() {
   // formik logic
@@ -11,9 +12,27 @@ export default function Contact() {
       email: "",
       message: "",
     },
-  });
 
-  console.log(formik.values);
+    //Validate form
+    //currently have two form validations
+
+    validationSchema: Yup.object({
+      name: Yup.string()
+        .max(30, "Name must be 30 Characters or Less")
+        .required("Name is Required"),
+      email: Yup.string()
+        .email("Invalid Email Address")
+        .required("Email is Required"),
+      message: Yup.string()
+        .max(500, "Message must be 500 Characters or less")
+        .required("Message is Required"),
+    }),
+
+    //submit form
+    onSubmit: (values) => {
+      console.log(values);
+    },
+  });
 
   return (
     <main className="lg:w-full lg:h-screen flex ">
@@ -25,53 +44,76 @@ export default function Contact() {
         </div>
         {/* contact form */}
         <div className="flex items-center justify-center ">
-          <form className="bg-blak w-96 h-full  font-serif py-6 px-10 text-sand">
+          <form
+            onSubmit={formik.handleSubmit}
+            className="bg-blak w-96 h-full  font-serif py-6 px-10 text-sand"
+          >
             <div className="flex justify-center pb-4 text-xl">
               <h2>Contact me for enquiries</h2>
             </div>
             {/* name input field */}
             <div className="">
-              <label className="block py-2" htmlFor="name">
-                Name
+              <label
+                className={`block py-2 ${
+                  formik.touched.name && formik.errors.name
+                    ? "text-red-600"
+                    : ""
+                }`}
+                htmlFor="name"
+              >
+                {formik.touched.name && formik.errors.name
+                  ? formik.errors.name
+                  : "Name"}
               </label>
               <input
                 className="p-2 w-full  focus:border-sand rounded-xl text-blak"
-                required
-                minLength={3}
-                maxLength={30}
                 type="text"
                 name="name"
                 placeholder="Enter Your Name"
                 value={formik.values.name}
                 onChange={formik.handleChange}
+                onBlur={formik.handleBlur}
               />
             </div>
             {/* email input field */}
             <div className="">
-              <label className="block py-2" htmlFor="email">
-                Email
+              <label
+                className={`block py-2 ${
+                  formik.touched.email && formik.errors.email
+                    ? "text-red-600"
+                    : ""
+                }`}
+                htmlFor="email"
+              >
+                {formik.touched.email && formik.errors.email
+                  ? formik.errors.email
+                  : "Email"}
               </label>
               <input
                 className="p-2 w-full rounded-xl text-blak"
-                required
-                minLength={6}
-                maxLength={50}
                 type="email"
                 name="email"
                 placeholder="Enter Your Email"
                 value={formik.values.email}
                 onChange={formik.handleChange}
+                onBlur={formik.handleBlur}
               />
             </div>
             {/* message input field */}
             <div>
-              <label className="block py-2" htmlFor="message">
-                Message
+              <label
+                className={`block py-2 ${
+                  formik.touched.message && formik.errors.message
+                    ? "text-red-600"
+                    : ""
+                }`}
+                htmlFor="message"
+              >
+                {formik.touched.message && formik.errors.message
+                  ? formik.errors.message
+                  : "Message"}
               </label>
               <textarea
-                required
-                minLength={10}
-                maxLength={500}
                 rows={4}
                 name="message"
                 placeholder="What can I help you with?"
