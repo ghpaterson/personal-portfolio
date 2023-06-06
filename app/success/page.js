@@ -1,3 +1,6 @@
+import Image from "next/image";
+import thanks from "../../public/thanks.png";
+
 export default function Success() {
   return (
     <main className="lg:w-full lg:h-screen flex ">
@@ -11,7 +14,11 @@ export default function Success() {
           </div>
         </div>
       </section>
-      <section className="w-1/2 h-screen bg-contact-image bg-cover "></section>
+      <section className="w-1/2 h-screen bg-blak ">
+        <div className="flex items-center justify-center">
+          <Image src={thanks} width={600} alt="contact-image" />
+        </div>
+      </section>
     </main>
   );
 }

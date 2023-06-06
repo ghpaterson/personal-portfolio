@@ -2,6 +2,8 @@
 
 import { useFormik } from "formik";
 import * as Yup from "yup";
+import Image from "next/image";
+import contact from "../../public/contact.png";
 
 export default function Contact() {
   //Router
@@ -40,15 +42,13 @@ export default function Contact() {
     <main className="lg:w-full lg:h-screen flex ">
       <section className="w-1/2 h-screen bg-sand">
         <div className="flex flex-col items-center py-12 ">
-          <div className="text-4xl font-mirage">
-            <h1>Contact Me</h1>
-          </div>
+          <div className="text-4xl font-mirage"></div>
         </div>
         {/* contact form */}
         <div className="flex items-center justify-center ">
           <form
             onSubmit={formik.handleSubmit}
-            className="bg-blak w-96 h-full  font-serif py-6 px-10 text-sand"
+            className="bg-blak w-96 h-full  font-serif py-6 px-10 text-sand rounded-lg shadow-xl"
           >
             <div className="flex justify-center pb-4 text-xl">
               <h2>Contact me for enquiries</h2>
@@ -136,7 +136,11 @@ export default function Contact() {
           </form>
         </div>
       </section>
-      <section className="w-1/2 h-screen bg-contact-image bg-cover "></section>
+      <section className="w-1/2 h-screen bg-blak ">
+        <div className="flex items-center justify-center pt-4">
+          <Image src={contact} width={600} alt="contact-image" />
+        </div>
+      </section>
     </main>
   );
 }
