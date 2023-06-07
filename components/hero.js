@@ -22,7 +22,7 @@ export default function Hero({ scrollToElement }) {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 1, delay: 1, ease: "easeIn" }}
-              className="flex flex-col items-center lg:items-start text-sand text-xl lg:text-3xl font-mirage"
+              className="flex flex-col items-center lg:items-start text-slate hover:text-sand text-xl lg:text-3xl font-mirage"
             >
               <h1>Graeme Paterson</h1>
               <div className="text-xl font-serif pt-6">

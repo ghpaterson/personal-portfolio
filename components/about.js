@@ -118,7 +118,7 @@ export default function About() {
       <Reveal>
         <section className="lg:mx-32  lg:pb-32 pb-10">
           <div className="lg:flex-row flex flex-col items-center px-10 lg:px-20 gap-6 font-mirage text-2xl">
-            <Link href="/Graeme-Paterson-CV.pdf" target="_blank">
+            <Link href="/GraemePatersonCV.pdf" target="_blank">
               <button className="bg-blak px-4 py-2 text-sand rounded-full">
                 CV
               </button>
