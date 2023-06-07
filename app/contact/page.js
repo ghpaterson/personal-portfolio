@@ -41,8 +41,9 @@ export default function Contact() {
   return (
     <main className="lg:w-full lg:h-screen flex ">
       <section className="w-1/2 h-screen bg-sand">
-        <div className="flex flex-col items-center py-12 ">
-          <div className="text-4xl font-mirage"></div>
+        <div className="flex flex-col items-center py-12 gap-2 ">
+          <h1 className="text-3xl font-mirage text-blak">Graeme Paterson</h1>
+          <p className="text-lg font-serif text-blak">Software Developer</p>
         </div>
         {/* contact form */}
         <div className="flex items-center justify-center ">

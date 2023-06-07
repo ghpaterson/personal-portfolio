@@ -22,6 +22,7 @@ module.exports = {
         bone: "#FFFFFC",
         sand: "#F1DDB6",
         blak: "#111817",
+        slate: "#5D5D5D",
       },
     },
   },
