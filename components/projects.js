@@ -62,11 +62,11 @@ export default function Projects({ scrollToElement }) {
             </p>
           </div>
           <div className="flex justify-end items-end">
-            <ul className="flex flex-col items-end font-mirage text-4xl lg:text-8xl  text-sand gap-2">
+            <ul className="flex flex-col items-end font-mirage text-4xl lg:text-8xl  text-slate gap-2">
               {posts.map((post) => (
                 <div key={post.id}>
                   <div
-                    className="hover:rotate-3 hover:italic hover:cursor-pointer"
+                    className="hover:rotate-3 hover:italic hover:cursor-pointer hover:text-sand"
                     onClick={() => scrollToProject(post.slug)}
                   >
                     <Reveal>

@@ -1,7 +1,7 @@
 export default function Loading() {
   return (
-    <div className="flex justify-center items-center text-5xl font-fungis">
-      Loading... great content
+    <div className="h-screen w-full flex justify-center items-center text-5xl font-mirage text-sand">
+      Subliminal Message
     </div>
   );
 }

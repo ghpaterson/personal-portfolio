@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion as m } from "framer-motion";
 import lotus from "../public/lotus.png";
+import gp from "../public/gp.png";
 
 export default function Hero({ scrollToElement }) {
   const headlessURL = "https://headless-iota-five.vercel.app/";
@@ -15,8 +16,8 @@ export default function Hero({ scrollToElement }) {
         transition={{ duration: 1, delay: 0.4, ease: "easeIn" }}
       >
         <div className=" flex flex-col lg:flex-row justify-between lg:mx-24 lg:py-8">
-          <div className="flex flex-col items-center gap-10 lg:gap-40">
-            <Image src={lotus} width={400} alt="lotus" />
+          <div className="flex flex-col items-center gap-10 lg:gap-40 lg:-mr-40">
+            <Image src={gp} width={500} alt="lotus" />
             <m.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -30,12 +31,12 @@ export default function Hero({ scrollToElement }) {
               </div>
             </m.div>
           </div>
-          <ul className="lg:h-screen flex flex-col items-center gap-2 lg:items-end lg:justify-center font-mirage text-5xl lg:text-9xl py-10 lg:py-0  text-sand">
+          <ul className="lg:h-screen flex flex-col items-center gap-2 lg:items-end lg:justify-center font-mirage text-5xl lg:text-9xl py-10 lg:py-0  text-slate">
             <m.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 1, delay: 0.6, ease: "easeIn" }}
-              className="hover:cursor-pointer hover:rotate-3 hover:italic"
+              className="hover:cursor-pointer hover:rotate-3 hover:italic hover:text-sand"
               onClick={() => scrollToElement("about")}
             >
               ABOUT
@@ -44,7 +45,7 @@ export default function Hero({ scrollToElement }) {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 1, delay: 0.8, ease: "easeIn" }}
-              className="hover:cursor-pointer hover:rotate-3 hover:italic"
+              className="hover:cursor-pointer hover:rotate-3 hover:italic hover:text-sand"
               onClick={() => scrollToElement("projects")}
             >
               PROJECTS
@@ -53,7 +54,7 @@ export default function Hero({ scrollToElement }) {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 1, delay: 0.9, ease: "easeIn" }}
-              className="flex items-center gap-4 lg:gap-10 hover:rotate-3 hover:italic"
+              className="flex items-center gap-4 lg:gap-10 hover:rotate-3 hover:italic hover:text-sand"
             >
               <Link href={headlessURL} target="_blank">
                 BLOG

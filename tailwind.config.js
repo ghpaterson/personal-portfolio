@@ -7,6 +7,10 @@ module.exports = {
   ],
   theme: {
     extend: {
+      backgroundImage: {
+        "contact-image":
+          "url('https://images.pexels.com/photos/2911521/pexels-photo-2911521.jpeg')",
+      },
       fontFamily: {
         fungis: ["fungis", "sans-serif"],
         poppins: ["Poppins", "sans-serif"],
@@ -18,6 +22,7 @@ module.exports = {
         bone: "#FFFFFC",
         sand: "#F1DDB6",
         blak: "#111817",
+        slate: "#5D5D5D",
       },
     },
   },

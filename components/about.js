@@ -116,9 +116,9 @@ export default function About() {
       </section>
       {/* cv section */}
       <Reveal>
-        <section className="lg:mx-32  lg:pb-32 pb-20">
+        <section className="lg:mx-32  lg:pb-32 pb-10">
           <div className="lg:flex-row flex flex-col items-center px-10 lg:px-20 gap-6 font-mirage text-2xl">
-            <Link href="/CV.pdf" target="_blank">
+            <Link href="/Graeme-Paterson-CV.pdf" target="_blank">
               <button className="bg-blak px-4 py-2 text-sand rounded-full">
                 CV
               </button>
@@ -136,6 +136,17 @@ export default function About() {
           </div>
         </section>
       </Reveal>
+      {/* <Reveal>
+        <section className="lg:mx-32  lg:pb-32 pb-20">
+          <div className="lg:flex-row flex flex-col items-center px-10 lg:px-20 gap-6 font-mirage text-2xl">
+            <Link href="/contact" target="_blank">
+              <button className="bg-blak px-4 py-2 text-sand rounded-full">
+                Contact Me
+              </button>
+            </Link>
+          </div>
+        </section>
+      </Reveal> */}
     </main>
   );
 }
